@@ -500,6 +500,13 @@ a.doc:hover .dmeta{color:var(--accent);}
 .reviews::-webkit-scrollbar-thumb{background:var(--border-strong); border-radius:999px;}
 .reviews::-webkit-scrollbar-track{background:transparent;}
 .reviews-hint{font-size:11.5px; color:var(--faint); margin:0 0 14px; display:flex; align-items:center; gap:6px;}
+.review-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:14px;}
+.review .review-tags{margin-top:14px;}
+.rtag{font-size:10.5px; font-weight:600; padding:4px 10px; border-radius:999px; background:var(--surface-2); color:var(--text-3); border:1px solid var(--border-soft); white-space:nowrap;}
+.rtag.person{background:var(--accent-wash); color:var(--accent); border-color:transparent;}
+.rtag.person::before{content:"★"; font-size:9px; margin-right:4px; vertical-align:1px;}
+.rtag.warn{background:var(--warn-wash); color:var(--warn); border-color:transparent;}
+.rtag.ok{background:var(--ok-wash); color:var(--ok); border-color:transparent;}
 .review{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; display:flex; flex-direction:column;}
 .review.critical{border-color:var(--border-strong);}
 .review-head{display:flex; align-items:center; gap:12px; margin-bottom:11px;}
@@ -566,6 +573,13 @@ a.doc:hover .dmeta{color:var(--accent);}
 .stat-support{font-size:12px; color:var(--muted); line-height:1.5; margin:0;}
 .stat-support .stat-n{font-family:var(--serif); font-weight:700; color:var(--accent); font-size:14px; margin-right:3px; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
 .subhead{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--text-3); margin:36px 0 16px;}
+/* program tiles: elevated cards with an icon badge, so the section is not flat */
+.card.tile{background:var(--surface); border-color:var(--border-soft); box-shadow:0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05); position:relative; overflow:hidden; transition:transform .15s var(--ease), box-shadow .15s var(--ease);}
+.card.tile::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); opacity:.85;}
+.card.tile:hover{transform:translateY(-2px); box-shadow:0 2px 4px rgba(0,0,0,.05), 0 14px 34px rgba(0,0,0,.08);}
+.tile-ic{width:42px; height:42px; border-radius:11px; background:var(--accent-wash); color:var(--accent); display:grid; place-items:center; margin-bottom:16px;}
+.tile-ic svg{width:22px; height:22px;}
+[data-theme="dark"] .card.tile{box-shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);}
 </style>
 </head>
 <body>
@@ -714,43 +728,51 @@ a.doc:hover .dmeta{color:var(--accent);}
               <div class="review-head"><span class="review-avatar">G</span><span class="review-who"><div class="review-name">Genesis Henry-Gonzalez</div><div class="review-meta">3 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">Great leasing and moving experience with Shahdad from the AGM Real Estate Group. He made the move-in process very knowledgeable, with good communication. Very friendly and professional!</p>
+              <div class="review-tags"><span class="rtag person">Shahdad</span><span class="rtag">Great communication</span><span class="rtag">Professional</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">E</span><span class="review-who"><div class="review-name">Emmanuel Felarca</div><div class="review-meta">Local Guide · 9 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">AGM has been excellent in the management of our unit in the Bolero Condominium. There have been no issues since they took over. Alyssa Henne is the AGM property manager, and she is very knowledgeable in her responsibilities, friendly, and easy to talk to. We are lucky to have her on our side.</p>
+              <div class="review-tags"><span class="rtag person">Alyssa Henne</span><span class="rtag">Knowledgeable</span><span class="rtag">No issues</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Casey Woods</div><div class="review-meta">18 hours ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">Shahdad was an outstanding professional to work with and helped me achieve my goal of getting into my first apartment. I highly recommend him without hesitation.</p>
+              <div class="review-tags"><span class="rtag person">Shahdad</span><span class="rtag">Professional</span><span class="rtag">First apartment</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Aaron Pablo-Scott</div><div class="review-meta">1 review · 2 days ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">Shahdad made the move-in process easy and stress-free. Always friendly, responsive, and great to work with!</p>
+              <div class="review-tags"><span class="rtag person">Shahdad</span><span class="rtag">Stress-free</span><span class="rtag">Responsive</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">M</span><span class="review-who"><div class="review-name">Melissa Webb</div><div class="review-meta">4 reviews · a week ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">I moved into the new Quil Crossing Apartments and it was a smooth process working with Shahdad. He answered all my questions and was very patient. If there was any issue with the move-in, he made sure to get it taken care of.</p>
+              <div class="review-tags"><span class="rtag person">Shahdad</span><span class="rtag">Patient</span><span class="rtag">Smooth move-in</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">K</span><span class="review-who"><div class="review-name">Kamaya Craig</div><div class="review-meta">3 reviews · 1 photo · a week ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">Shahdad has been very helpful throughout the process of getting into the Quil Crossing Apartments, and they are good quality.</p>
+              <div class="review-tags"><span class="rtag person">Shahdad</span><span class="rtag">Helpful</span><span class="rtag">Quality units</span></div>
             </div>
             <div class="review">
               <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Celum Hatch</div><div class="review-meta">1 review · 2 weeks ago</div></span><span class="review-new">New</span></div>
               <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
               <p class="review-body">Great customer service and great hospitality. Really thankful for the opportunity to live in the apartments and to be taken care of by such a great company and staff.</p>
               <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>We really appreciate this, Celum. Knowing our staff made you feel well taken care of is exactly what we aim for. Thank you for being a resident with AGM.</p></div>
+              <div class="review-tags"><span class="rtag person">Our team</span><span class="rtag">Great service</span><span class="rtag">Hospitality</span></div>
             </div>
             <div class="review critical">
               <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Anonymous</div><div class="review-meta">1 review · 2 weeks ago</div></span></div>
               <div class="review-stars rstars"><span class="fill" style="width:20%"></span></div>
               <p class="review-body">Apartment from AGM contained hazardous mold and gave me breathing issues. Call the city to get inspections of units before signing a lease.</p>
               <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>AGM takes every resident's experience seriously and is committed to addressing concerns. While we are unable to connect this anonymous review to a specific record, we encourage any current or former resident to reach out to our office directly so we can look into the matter.</p></div>
+              <div class="review-tags"><span class="rtag warn">Concern raised</span><span class="rtag ok">Responded</span></div>
             </div>
           </div>
           <p class="form-note" style="margin-top:16px;">The one critical review stays in view on purpose. Our calm, professional reply beneath it is exactly how we handle a concern in public.</p>
@@ -827,18 +849,18 @@ a.doc:hover .dmeta{color:var(--accent);}
           <p class="eyebrow">Program overview</p>
           <h2>Objectives &amp; Ground Rules</h2>
           <div class="grid grid-2">
-            <div class="card"><h4>Hold 4+ stars, everywhere</h4><p>Keep a 4+ star rating across every AGM profile, so we clear the bar prospects set before they will even consider a property.</p></div>
-            <div class="card"><h4>Show up and stand out</h4><p>Strengthen our search visibility and first impressions, so tenants and owners find us and like what they see.</p></div>
-            <div class="card"><h4>Keep a steady stream</h4><p>Build a genuine, ongoing flow of reviews from tenants and owners, so our rating reflects the real quality of our work.</p></div>
-            <div class="card"><h4>Recognize the team</h4><p>Celebrate and reward the people earning the reviews, because the results are theirs.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2l2.5 5.9 6.4.5-4.9 4.2 1.5 6.2L12 16.9 6 20l1.5-6.2L2.6 9.6l6.4-.5z"/></svg></div><h4>Hold 4+ stars, everywhere</h4><p>Keep a 4+ star rating across every AGM profile, so we clear the bar prospects set before they will even consider a property.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg></div><h4>Show up and stand out</h4><p>Strengthen our search visibility and first impressions, so tenants and owners find us and like what they see.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></div><h4>Keep a steady stream</h4><p>Build a genuine, ongoing flow of reviews from tenants and owners, so our rating reflects the real quality of our work.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7.5 21 12 18.5 16.5 21 15 13.5"/></svg></div><h4>Recognize the team</h4><p>Celebrate and reward the people earning the reviews, because the results are theirs.</p></div>
           </div>
           <p class="subhead">The ground rules we hold to</p>
           <p class="measure sub" style="margin:0 0 16px;">Asking for reviews is simple when we keep to a few principles.</p>
           <div class="grid grid-2">
-            <div class="card"><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
-            <div class="card"><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
-            <div class="card"><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
-            <div class="card"><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 6.9a4.3 4.3 0 0 1 8.5 1.9c0 6.2-8.5 11.7-8.5 11.7z"/></svg></div><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
           </div>
         </section>
 
@@ -885,7 +907,7 @@ a.doc:hover .dmeta{color:var(--accent);}
         <section class="reveal">
           <p class="eyebrow">Recognition</p>
           <h2>The People Behind the Reviews</h2>
-          <p class="measure sub" style="margin-bottom:24px;">Our tenants and owners name these team members again and again. <span class="todo-note">Details to confirm</span></p>
+          <p class="measure sub" style="margin-bottom:24px;">Recent staff highlights from the profile refresh.</p>
           <div class="grid grid-2">
             <div class="card">
               <div class="card-head"><h4>Shahdad</h4><span class="chip ok">Leasing &amp; move-ins</span></div>
@@ -896,7 +918,6 @@ a.doc:hover .dmeta{color:var(--accent);}
               <p>Singled out by owners for her knowledge and approachability, including the Bolero Condominium. "We are lucky to have her on our side." <span class="dim-num">[#] reviews to confirm.</span></p>
             </div>
           </div>
-          <p class="form-note" style="margin-top:16px;">Add any other standouts here, along with review counts, themes tenants mention, and any recognition planned (certificate, gift card, or a shout-out).</p>
         </section>
 
         <section class="reveal">
@@ -910,7 +931,6 @@ a.doc:hover .dmeta{color:var(--accent);}
           <div class="goalbar">
             <div class="gb-head"><h4>This month's progress</h4><span class="gb-count"><span class="dim-num">[6]</span> of 10</span></div>
             <div class="progress"><div class="bar" style="width:60%"></div></div>
-            <div class="gb-foot"><span class="todo-note">To update</span> Set the current count before the meeting. A little friendly competition keeps the momentum going.</div>
           </div>
         </section>
 
