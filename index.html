@@ -455,6 +455,16 @@ a.doc:hover .dmeta{color:var(--accent);}
 .jump .j-before{background:var(--danger-wash); color:var(--danger);}
 .jump .j-after{background:var(--accent-wash); color:var(--accent);}
 .jump .j-arrow{color:var(--faint); font-size:22px; font-weight:700;}
+/* hero two-column layout — text left, the then/now story right, stats full width */
+.hero-top{display:grid; grid-template-columns:1.5fr 1fr; gap:44px; align-items:center;}
+.hero-lead h2{margin-bottom:16px;}
+.hero-lead p{margin:0; max-width:42ch;}
+.jump.stack{display:flex; flex-direction:column; align-items:stretch; gap:8px; width:100%;}
+.jump.stack .j-pill{flex-direction:row; align-items:center; justify-content:space-between; padding:16px 22px; min-width:0;}
+.jump.stack .j-pill .jp-n{font-size:30px;}
+.jump.stack .j-pill .jp-l{text-align:right; max-width:15ch; line-height:1.35; opacity:.9;}
+.jump.stack .j-arrow{align-self:center; font-size:18px; line-height:1;}
+@media(max-width:760px){.hero-top{grid-template-columns:1fr; gap:26px;} .hero-lead p{max-width:56ch;}}
 
 /* star ratings — precise partial fill via overlay */
 .rstars{position:relative; display:inline-block; font-size:17px; line-height:1; color:var(--border-strong); letter-spacing:1px; font-family:Arial, sans-serif;}
@@ -595,13 +605,17 @@ a.doc:hover .dmeta{color:var(--accent);}
       <div class="page" id="page-overview">
         <section class="reveal">
           <div class="hero">
-            <p class="h-eyebrow">Updates &amp; Reminders</p>
-            <h2>Our reputation has become one of our strongest assets.</h2>
-            <p>A quick look at where we started, where we are now, and the simple habits that keep the momentum going.</p>
-            <div class="jump">
-              <span class="j-pill j-before"><span class="jp-n">2.2★</span><span class="jp-l">Then · AGM Inc</span></span>
-              <span class="j-arrow">→</span>
-              <span class="j-pill j-after"><span class="jp-n">4.5★</span><span class="jp-l">Now · AGM Real Estate Group</span></span>
+            <div class="hero-top">
+              <div class="hero-lead">
+                <p class="h-eyebrow">Updates &amp; Reminders</p>
+                <h2>How we're doing online</h2>
+                <p>A quick look at where we started, where we are now, and the simple habits that keep the momentum going.</p>
+              </div>
+              <div class="jump stack" aria-label="Google rating, then and now">
+                <span class="j-pill j-before"><span class="jp-n">2.2★</span><span class="jp-l">Then · AGM Inc</span></span>
+                <span class="j-arrow">↓</span>
+                <span class="j-pill j-after"><span class="jp-n">4.5★</span><span class="jp-l">Now · AGM Real Estate Group</span></span>
+              </div>
             </div>
             <div class="hero-stats">
               <div class="hs"><div class="hs-n">4.5★</div><div class="hs-l">Google rating</div></div>
