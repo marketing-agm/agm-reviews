@@ -484,6 +484,18 @@ a.doc:hover .dmeta{color:var(--accent);}
 .ba-after .ba-score{color:var(--accent);} .ba-before .ba-score{color:var(--danger);}
 .ba-name{font-family:var(--serif); font-weight:600; font-size:15px; color:var(--text); letter-spacing:-.01em;}
 .ba-cap{font-size:12.5px; color:var(--text-3); max-width:34ch; line-height:1.5;}
+/* Google-panel recreation inside each slide */
+.gpanel{position:absolute; inset:0; padding:34px 40px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:13px; text-align:left;}
+.gp-name{font-family:var(--serif); font-weight:700; font-size:25px; letter-spacing:-.01em; color:var(--text); line-height:1.15;}
+.gp-rating{display:flex; align-items:center; gap:9px; flex-wrap:wrap;}
+.gp-score{font-size:18px; font-weight:700; font-variant-numeric:tabular-nums;}
+.ba-before .gp-score{color:var(--danger);} .ba-after .gp-score{color:var(--accent);}
+.gp-rating .rstars{font-size:16px;}
+.gp-reviews{font-size:13px; color:var(--accent);}
+.gp-cat{font-size:13px; color:var(--text-3); max-width:40ch; line-height:1.45;}
+.gp-actions{display:flex; gap:10px; margin-top:6px;}
+.gp-btn{font-size:12px; font-weight:600; color:var(--accent); border:1px solid var(--border-strong); border-radius:999px; padding:6px 15px;}
+.gp-closed{font-size:12px; font-weight:700; color:#fff; background:var(--danger); border-radius:6px; padding:8px 16px; margin-top:2px; letter-spacing:.01em;}
 .ba-tag{position:absolute; top:12px; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:5px 10px; border-radius:3px; z-index:4;}
 .ba-tag.before{left:12px; background:var(--danger-wash); color:var(--danger);}
 .ba-tag.after{right:12px; background:var(--accent-wash); color:var(--accent);}
@@ -695,18 +707,22 @@ a.doc:hover .dmeta{color:var(--accent);}
           <div class="ba" style="--p:50%;">
             <div class="ba-pane">
               <div class="ba-layer ba-after">
-                <!-- TO LOAD: replace this block's contents with <img src="images/profile-after.png" alt="AGM Real Estate Group Google profile, 4.5 stars" /> -->
-                <div class="ba-score">4.5★</div>
-                <div class="rstars lg"><span class="fill" style="width:90%"></span></div>
-                <div class="ba-name">AGM Real Estate Group, LLC</div>
-                <div class="ba-cap">Steady five-star reviews that name our team, with a reply on every one.</div>
+                <!-- Recreation of the current Google panel. To use the real screenshot instead, replace this .gpanel with <img src="images/profile-after.png" alt="AGM Real Estate Group Google profile, 4.5 stars" /> -->
+                <div class="gpanel">
+                  <div class="gp-name">AGM Real Estate Group, LLC</div>
+                  <div class="gp-rating"><span class="gp-score">4.5</span><span class="rstars"><span class="fill" style="width:90%"></span></span><span class="gp-reviews">8 Google reviews</span></div>
+                  <div class="gp-cat">Property management company in Bellevue, Washington</div>
+                  <div class="gp-actions"><span class="gp-btn">Website</span><span class="gp-btn">Directions</span></div>
+                </div>
               </div>
               <div class="ba-layer ba-before">
-                <!-- TO LOAD: replace this block's contents with <img src="images/profile-before.png" alt="AGM Inc old Google profile, 2.2 stars" /> -->
-                <div class="ba-score">2.2★</div>
-                <div class="rstars lg"><span class="fill" style="width:44%"></span></div>
-                <div class="ba-name">AGM Inc · old profile</div>
-                <div class="ba-cap">A low rating and negative comments were the first thing prospects saw.</div>
+                <!-- Recreation of the old Google panel. To use the real screenshot instead, replace this .gpanel with <img src="images/profile-before.png" alt="AGM Inc old Google profile, 2.2 stars" /> -->
+                <div class="gpanel">
+                  <div class="gp-name">AGM Inc.</div>
+                  <div class="gp-rating"><span class="gp-score">2.2</span><span class="rstars"><span class="fill" style="width:44%"></span></span><span class="gp-reviews">31 Google reviews</span></div>
+                  <div class="gp-cat">Commercial real estate agency in Bellevue, Washington</div>
+                  <div class="gp-closed">Permanently closed</div>
+                </div>
               </div>
               <span class="ba-tag before">Before</span>
               <span class="ba-tag after">After</span>
@@ -715,7 +731,7 @@ a.doc:hover .dmeta{color:var(--accent);}
               <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal the before or after profile" />
             </div>
           </div>
-          <p class="form-note" style="margin-top:14px;"><span class="todo-note">To load</span> Swap each panel for the actual profile screenshot. Drag the handle, or focus it and use the arrow keys.</p>
+          <p class="form-note" style="margin-top:14px;">Drag the handle, or focus it and use the arrow keys, to compare the old AGM Inc profile with the current AGM Real Estate Group, LLC profile.</p>
         </section>
 
         <section class="reveal">
