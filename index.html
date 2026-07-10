@@ -439,7 +439,13 @@ a.doc:hover .dmeta{color:var(--accent);}
 .hero .h-eyebrow{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin:0 0 16px;}
 .hero h2{font-size:32px; line-height:1.15; max-width:20ch; margin:0 0 18px;}
 .hero p{max-width:56ch; margin:0 0 26px; font-size:15.5px; line-height:1.65; color:var(--text-2);}
-@media(max-width:600px){.hero{padding:36px 26px;} .hero h2{font-size:26px;}}
+.hero-stats{display:flex; flex-wrap:wrap; gap:16px 0; margin-top:32px; border-top:1px solid var(--border-soft); padding-top:26px;}
+.hero-stats .hs{padding:2px 28px; border-right:1px solid var(--border-soft);}
+.hero-stats .hs:first-child{padding-left:0;}
+.hero-stats .hs:last-child{border-right:none;}
+.hs .hs-n{font-family:var(--serif); font-weight:700; font-size:27px; color:var(--accent); letter-spacing:-.02em; line-height:1; font-variant-numeric:tabular-nums;}
+.hs .hs-l{font-size:11.5px; color:var(--muted); margin-top:8px; letter-spacing:.01em;}
+@media(max-width:600px){.hero{padding:36px 26px;} .hero h2{font-size:26px;} .hero-stats .hs{padding:2px 18px;}}
 
 /* the 2.2 -> 4.5 jump */
 .jump{display:inline-flex; align-items:center; gap:16px; flex-wrap:wrap;}
@@ -478,7 +484,12 @@ a.doc:hover .dmeta{color:var(--accent);}
 [data-theme="dark"] .ba-handle,[data-theme="dark"] .ba-grip{background:#e9e6e2;}
 
 /* review grid */
-.reviews{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; align-items:start;}
+.reviews{display:flex; gap:16px; overflow-x:auto; align-items:flex-start; padding:4px 0 16px; scroll-snap-type:x proximity; scrollbar-width:thin; scrollbar-color:var(--border-strong) transparent;}
+.reviews .review{flex:0 0 320px; scroll-snap-align:start;}
+.reviews::-webkit-scrollbar{height:8px;}
+.reviews::-webkit-scrollbar-thumb{background:var(--border-strong); border-radius:999px;}
+.reviews::-webkit-scrollbar-track{background:transparent;}
+.reviews-hint{font-size:11.5px; color:var(--faint); margin:0 0 14px; display:flex; align-items:center; gap:6px;}
 .review{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; display:flex; flex-direction:column;}
 .review.critical{border-color:var(--border-strong);}
 .review-head{display:flex; align-items:center; gap:12px; margin-bottom:11px;}
@@ -558,7 +569,6 @@ a.doc:hover .dmeta{color:var(--accent);}
     </div>
     <nav class="nav-links" id="navlinks" aria-label="Primary">
       <button class="nav-link" data-route="overview">Overview</button>
-      <button class="nav-link" data-route="agenda">Agenda</button>
       <button class="nav-link" data-route="progress">Where We Stand</button>
       <button class="nav-link" data-route="program">The Program</button>
       <button class="nav-link" data-route="recognition">Recognition &amp; Goals</button>
@@ -585,25 +595,21 @@ a.doc:hover .dmeta{color:var(--accent);}
       <div class="page" id="page-overview">
         <section class="reveal">
           <div class="hero">
-            <p class="h-eyebrow">AGM Reputation Management · Updates &amp; Reminders</p>
+            <p class="h-eyebrow">Updates &amp; Reminders</p>
             <h2>Our reputation has become one of our strongest assets.</h2>
-            <p>Over the past year, our online reputation has grown into a real driver of new business and trust with tenants and owners alike. Today's briefing is a quick refresher on the program, and a chance to recognize the people behind the results.</p>
+            <p>A quick look at where we started, where we are now, and the simple habits that keep the momentum going.</p>
             <div class="jump">
               <span class="j-pill j-before"><span class="jp-n">2.2★</span><span class="jp-l">Then · AGM Inc</span></span>
               <span class="j-arrow">→</span>
               <span class="j-pill j-after"><span class="jp-n">4.5★</span><span class="jp-l">Now · AGM Real Estate Group</span></span>
             </div>
-          </div>
-          <p class="eyebrow" style="margin-top:48px;">The numbers today</p>
-          <h2>At a Glance</h2>
-          <span class="todo-note">Bracketed figures to confirm</span>
-          <div class="grid grid-3" style="margin-top:8px;">
-            <div class="card"><div class="f-num"><span class="dim-num">[4.5]</span>★</div><p>Our current Google rating on the AGM Real Estate Group profile.</p></div>
-            <div class="card"><div class="f-num"><span class="dim-num">[8]</span></div><p>Total reviews on the new profile, and climbing steadily.</p></div>
-            <div class="card"><div class="f-num"><span class="dim-num">[7 of 8]</span></div><p>Five-star reviews left by tenants and owners.</p></div>
-            <div class="card"><div class="f-num">Every review</div><p>Receives a professional, personal reply from AGM.</p></div>
-            <div class="card"><div class="f-num">4+★</div><p>The standard we hold across every AGM profile.</p></div>
-            <div class="card"><div class="f-num">10 / mo</div><p>Our team goal for new five-star reviews.</p></div>
+            <div class="hero-stats">
+              <div class="hs"><div class="hs-n">4.5★</div><div class="hs-l">Google rating</div></div>
+              <div class="hs"><div class="hs-n">8</div><div class="hs-l">reviews so far</div></div>
+              <div class="hs"><div class="hs-n">7 of 8</div><div class="hs-l">five-star</div></div>
+              <div class="hs"><div class="hs-n">4+★</div><div class="hs-l">our standard</div></div>
+              <div class="hs"><div class="hs-n">10<span style="font-size:15px;"> / mo</span></div><div class="hs-l">team goal</div></div>
+            </div>
           </div>
         </section>
 
@@ -652,25 +658,6 @@ a.doc:hover .dmeta{color:var(--accent);}
         </section>
       </div>
 
-      <!-- ============ AGENDA ============ -->
-      <div class="page" id="page-agenda">
-        <section class="reveal">
-          <p class="eyebrow">Today's meeting · roughly 25 minutes</p>
-          <h2>Meeting Agenda</h2>
-          <p class="measure sub" style="margin-bottom:28px;">A refresher on the Reputation Management Program, and a moment to recognize outstanding work. Here is how we'll spend our time together.</p>
-          <div class="steps">
-            <div class="step"><div><h4>Welcome &amp; Purpose <span class="chip ok" style="margin-left:6px;">3 min · Soraya</span></h4><p>Why we're here and what we'll cover today.</p></div></div>
-            <div class="step"><div><h4>Why Reviews Matter <span class="chip ok" style="margin-left:6px;">5 min · Group</span></h4><p>An open conversation with the room: what does our reputation do for us, and for our tenants and owners?</p></div></div>
-            <div class="step"><div><h4>Program Overview <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Our objectives, the ground rules, and how reviews are tracked and recognized.</p></div></div>
-            <div class="step"><div><h4>Best Practices <span class="chip ok" style="margin-left:6px;">5–7 min · Gerry &amp; Leary</span></h4><p>The habits that earn five stars, and the natural moments to ask.</p></div></div>
-            <div class="step"><div><h4>Employee Recognition <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Celebrating the team members our tenants name again and again.</p></div></div>
-            <div class="step"><div><h4>Team Goals Ahead <span class="chip ok" style="margin-left:6px;">3 min · Leary</span></h4><p>Where we're headed, and how we get there together.</p></div></div>
-            <div class="step"><div><h4>Questions &amp; Discussion <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Your ideas, your wins, and any challenges you've run into.</p></div></div>
-            <div class="step"><div><h4>Closing <span class="chip ok" style="margin-left:6px;">2 min · Soraya</span></h4><p>A thank-you, and a look at the road ahead.</p></div></div>
-          </div>
-        </section>
-      </div>
-
       <!-- ============ WHERE WE STAND ============ -->
       <div class="page" id="page-progress">
         <section class="reveal">
@@ -701,6 +688,58 @@ a.doc:hover .dmeta{color:var(--accent);}
             </div>
           </div>
           <p class="form-note" style="margin-top:14px;"><span class="todo-note">To load</span> Swap each panel for the actual profile screenshot. Drag the handle, or focus it and use the arrow keys.</p>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Recent reviews</p>
+          <h2>What Tenants Are Saying</h2>
+          <p class="measure sub" style="margin-bottom:18px;">A sample of recent reviews on the AGM Real Estate Group profile. Notice how often our team is named.</p>
+          <p class="reviews-hint">Scroll to read more →</p>
+          <div class="reviews">
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">G</span><span class="review-who"><div class="review-name">Genesis Henry-Gonzalez</div><div class="review-meta">3 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Great leasing and moving experience with Shahdad from the AGM Real Estate Group. He made the move-in process very knowledgeable, with good communication. Very friendly and professional!</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">E</span><span class="review-who"><div class="review-name">Emmanuel Felarca</div><div class="review-meta">Local Guide · 9 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">AGM has been excellent in the management of our unit in the Bolero Condominium. There have been no issues since they took over. Alyssa Henne is the AGM property manager, and she is very knowledgeable in her responsibilities, friendly, and easy to talk to. We are lucky to have her on our side.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Casey Woods</div><div class="review-meta">18 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad was an outstanding professional to work with and helped me achieve my goal of getting into my first apartment. I highly recommend him without hesitation.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Aaron Pablo-Scott</div><div class="review-meta">1 review · 2 days ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad made the move-in process easy and stress-free. Always friendly, responsive, and great to work with!</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">M</span><span class="review-who"><div class="review-name">Melissa Webb</div><div class="review-meta">4 reviews · a week ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">I moved into the new Quil Crossing Apartments and it was a smooth process working with Shahdad. He answered all my questions and was very patient. If there was any issue with the move-in, he made sure to get it taken care of.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">K</span><span class="review-who"><div class="review-name">Kamaya Craig</div><div class="review-meta">3 reviews · 1 photo · a week ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad has been very helpful throughout the process of getting into the Quil Crossing Apartments, and they are good quality.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Celum Hatch</div><div class="review-meta">1 review · 2 weeks ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Great customer service and great hospitality. Really thankful for the opportunity to live in the apartments and to be taken care of by such a great company and staff.</p>
+              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>We really appreciate this, Celum. Knowing our staff made you feel well taken care of is exactly what we aim for. Thank you for being a resident with AGM.</p></div>
+            </div>
+            <div class="review critical">
+              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Anonymous</div><div class="review-meta">1 review · 2 weeks ago</div></span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:20%"></span></div>
+              <p class="review-body">Apartment from AGM contained hazardous mold and gave me breathing issues. Call the city to get inspections of units before signing a lease.</p>
+              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>AGM takes every resident's experience seriously and is committed to addressing concerns. While we are unable to connect this anonymous review to a specific record, we encourage any current or former resident to reach out to our office directly so we can look into the matter.</p></div>
+            </div>
+          </div>
+          <p class="form-note" style="margin-top:16px;">The one critical review stays in view on purpose. Our calm, professional reply beneath it is exactly how we handle a concern in public.</p>
         </section>
 
         <section class="reveal">
@@ -765,57 +804,6 @@ a.doc:hover .dmeta{color:var(--accent);}
             <div class="card"><p class="stat-point">With only a handful of reviews, a single bad one pulls the whole average down. That is where we are today.</p><p class="stat-support"><span class="stat-n">4.5★</span>one 1★ review, at 8 reviews total</p></div>
             <div class="card"><p class="stat-point">With a deep, steady stream behind it, that same review barely registers. This is why we keep the momentum up.</p><p class="stat-support"><span class="stat-n">4.9★</span>the same 1★ review, at 80 reviews total</p></div>
           </div>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">Recent reviews</p>
-          <h2>What Tenants Are Saying</h2>
-          <p class="measure sub" style="margin-bottom:24px;">A sample of recent reviews on the AGM Real Estate Group profile. Notice how often our team is named.</p>
-          <div class="reviews">
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">G</span><span class="review-who"><div class="review-name">Genesis Henry-Gonzalez</div><div class="review-meta">3 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">Great leasing and moving experience with Shahdad from the AGM Real Estate Group. He made the move-in process very knowledgeable, with good communication. Very friendly and professional!</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">E</span><span class="review-who"><div class="review-name">Emmanuel Felarca</div><div class="review-meta">Local Guide · 9 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">AGM has been excellent in the management of our unit in the Bolero Condominium. There have been no issues since they took over. Alyssa Henne is the AGM property manager, and she is very knowledgeable in her responsibilities, friendly, and easy to talk to. We are lucky to have her on our side.</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Casey Woods</div><div class="review-meta">18 hours ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">Shahdad was an outstanding professional to work with and helped me achieve my goal of getting into my first apartment. I highly recommend him without hesitation.</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Aaron Pablo-Scott</div><div class="review-meta">1 review · 2 days ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">Shahdad made the move-in process easy and stress-free. Always friendly, responsive, and great to work with!</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">M</span><span class="review-who"><div class="review-name">Melissa Webb</div><div class="review-meta">4 reviews · a week ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">I moved into the new Quil Crossing Apartments and it was a smooth process working with Shahdad. He answered all my questions and was very patient. If there was any issue with the move-in, he made sure to get it taken care of.</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">K</span><span class="review-who"><div class="review-name">Kamaya Craig</div><div class="review-meta">3 reviews · 1 photo · a week ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">Shahdad has been very helpful throughout the process of getting into the Quil Crossing Apartments, and they are good quality.</p>
-            </div>
-            <div class="review">
-              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Celum Hatch</div><div class="review-meta">1 review · 2 weeks ago</div></span><span class="review-new">New</span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
-              <p class="review-body">Great customer service and great hospitality. Really thankful for the opportunity to live in the apartments and to be taken care of by such a great company and staff.</p>
-              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>We really appreciate this, Celum. Knowing our staff made you feel well taken care of is exactly what we aim for. Thank you for being a resident with AGM.</p></div>
-            </div>
-            <div class="review critical">
-              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Anonymous</div><div class="review-meta">1 review · 2 weeks ago</div></span></div>
-              <div class="review-stars rstars"><span class="fill" style="width:20%"></span></div>
-              <p class="review-body">Apartment from AGM contained hazardous mold and gave me breathing issues. Call the city to get inspections of units before signing a lease.</p>
-              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>AGM takes every resident's experience seriously and is committed to addressing concerns. While we are unable to connect this anonymous review to a specific record, we encourage any current or former resident to reach out to our office directly so we can look into the matter.</p></div>
-            </div>
-          </div>
-          <p class="form-note" style="margin-top:16px;">The one critical review stays in view on purpose. Our calm, professional reply beneath it is exactly how we handle a concern in public.</p>
         </section>
       </div>
 
@@ -1039,20 +1027,14 @@ var RAILS = {
   'overview': {
     eyebrow:'All-Staff Briefing · Internal', title:'Where We Stand Today',
     pos:'A quick refresher on our Reputation Management Program: where we started, where we are now, and the habits that keep us moving forward.',
-    glance:[['Google rating','[4.5]★'],['Total reviews','[8]'],['Five-star','[7 of 8]'],['Monthly goal','10 reviews']],
-    foot:'Prepared by AGM Real Estate Group. Bracketed figures to confirm.'
-  },
-  'agenda': {
-    eyebrow:'Today’s Meeting', title:'How We’ll Spend Our Time',
-    pos:'A refresher on the program, and a moment to recognize outstanding work. Roughly 25 minutes together.',
-    glance:[['Duration','~25 min'],['Sections','8'],['Leads','Soraya · Leary · Gerry']],
-    foot:'All-staff meeting agenda.'
+    glance:[['Google rating','4.5★'],['Total reviews','8'],['Five-star','7 of 8'],['Monthly goal','10 reviews']],
+    foot:'Prepared by AGM Real Estate Group.'
   },
   'progress': {
     eyebrow:'Where We Were → Where We Are', title:'From 2.2 to 4.5 Stars',
     pos:'The old AGM Inc profile sat at 2.2 stars. The new AGM Real Estate Group profile tells a very different story, and it keeps getting better.',
-    glance:[['Then','2.2★'],['Now','[4.5]★'],['Reply rate','Every review'],['Goal','10 / month']],
-    foot:'Ratings and counts marked to confirm.'
+    glance:[['Then','2.2★'],['Now','4.5★'],['Reviews','8 so far'],['Goal','10 / month']],
+    foot:'A steady climb, review by review.'
   },
   'program': {
     eyebrow:'The Program & Playbook', title:'What We Do, and How',
@@ -1090,17 +1072,16 @@ function renderRail(route){
 }
 
 /* ---- Router ---- */
-var ROUTES = ['overview','agenda','progress','program','recognition','portal'];
+var ROUTES = ['overview','progress','program','recognition','portal'];
 var TITLES = {
   'overview':'Overview — AGM Reputation Management',
-  'agenda':'Agenda — AGM Reputation Management',
   'progress':'Where We Stand — AGM Reputation Management',
   'program':'The Program — AGM Reputation Management',
   'recognition':'Recognition & Goals — AGM Reputation Management',
   'portal':'Reputation Portal — AGM Reputation Management'
 };
 var NAVLABELS = {
-  'overview':'Overview', 'agenda':'Agenda', 'progress':'Where We Stand',
+  'overview':'Overview', 'progress':'Where We Stand',
   'program':'The Program', 'recognition':'Recognition & Goals', 'portal':'Reputation Portal'
 };
 function currentRoute(){
