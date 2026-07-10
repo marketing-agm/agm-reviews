@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>AGM Reputation Management — Updates &amp; Reminders</title>
+<meta name="description" content="Internal all-staff briefing: AGM Real Estate Group Reputation Management Program. Where we started, where we are today, and the habits that keep us moving forward." />
+<meta name="theme-color" content="#fbfaf9" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23129ae5' d='M16 3l3.5 8.6 9.3.6-7.1 6 2.3 9-8-4.9-8 4.9 2.3-9-7.1-6 9.3-.6z'/%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AGM Reputation Management — Updates & Reminders" />
+<meta property="og:description" content="Prepared by AGM Real Estate Group. Internal use." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   AGM TEMPLATE — TOKENS
+   Palette on AGM brand blue (#129AE5); structure unchanged from
+   the AGM micro-site template.
+   ============================================================ */
+:root{
+  --bg:#fbfaf9; --surface:#ffffff; --surface-2:#f7f4f1;
+  --border:#ece7e1; --border-soft:#f0ebe5; --border-strong:#ddd5cb;
+  --text:#1c1917; --text-2:#44403c; --text-3:#57534e;
+  --muted:#78716c; --faint:#a8a29e;
+  --accent:#129ae5; --accent-hover:#0e7fc0; --accent-wash:#e4f3fd;
+  --danger:#cc3333; --danger-wash:#ffeaea;
+  --ok:#0e7fc0; --ok-wash:#e4f3fd;
+  --warn:#8b6a00; --warn-wash:#fdf3da;
+  --radius:6px; --radius-sm:4px;
+  --rail-w:380px; --shell-w:1400px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --serif:'Source Serif 4', Georgia, serif;
+  --sans:'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#0d0b0a; --surface:#161210; --surface-2:#1d1815;
+  --border:#271f1a; --border-soft:#221b17; --border-strong:#342a23;
+  --text:#f5f3f1; --text-2:#d8d2cc; --text-3:#b8b0a8;
+  --muted:#928a82; --faint:#6b635c;
+  --accent:#66c0f1; --accent-hover:#8ad0f5; --accent-wash:#0d2535;
+  --danger:#ff7a7a; --danger-wash:#311616;
+  --ok:#66c0f1; --ok-wash:#0d2535;
+  --warn:#d9b24d; --warn-wash:#2a2310;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--text-2);
+  font-family:var(--sans); font-size:14px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  transition:background .2s var(--ease), color .2s var(--ease);
+}
+h1,h2,h3,h4{font-family:var(--serif); color:var(--text); line-height:1.2; margin:0; font-weight:600;}
+h1{font-size:28px; font-weight:700; letter-spacing:-0.02em;}
+h2{font-size:22px; letter-spacing:-0.015em;}
+h3{font-size:17px; letter-spacing:-0.01em;}
+h4{font-size:15px; letter-spacing:-0.01em;}
+p{margin:0 0 16px;}
+a{color:var(--accent); text-decoration:none; transition:color .15s var(--ease);}
+a:hover{color:var(--accent-hover);}
+ul{margin:0; padding:0; list-style:none;}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:var(--radius-sm);}
+.skip{position:absolute; left:-9999px; top:8px; background:var(--surface); border:1px solid var(--border); padding:8px 14px; border-radius:var(--radius); z-index:300;}
+.skip:focus{left:16px;}
+
+/* labels */
+.eyebrow{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-3); margin:0 0 14px;}
+.eyebrow-accent{display:inline-block; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:var(--accent); background:var(--accent-wash); padding:5px 10px; border-radius:var(--radius-sm); margin:0 0 18px;}
+
+/* ============================================================
+   SHELL — full-width header / centered [rail | main]
+   ============================================================ */
+.topbar{position:sticky; top:0; z-index:100; background:var(--bg); border-bottom:1px solid var(--border);}
+.topbar-inner{display:flex; align-items:center; gap:28px; height:64px; padding:0 40px;}
+.brand{display:flex; align-items:baseline; gap:9px; font-family:var(--serif); font-weight:700; color:var(--text); font-size:16px; letter-spacing:-0.01em; cursor:pointer; white-space:nowrap;}
+.brand .mark{font-size:10px; font-weight:600; letter-spacing:.14em; color:var(--accent); text-transform:uppercase; font-family:var(--sans);}
+.nav-links{display:flex; align-items:center; gap:4px; margin:0 auto;}
+.nav-right{display:flex; align-items:center; gap:10px;}
+.nav-link{font-size:13px; font-weight:500; color:var(--text-3); padding:8px 12px; border-radius:var(--radius); cursor:pointer; background:none; border:none; font-family:var(--sans); transition:color .15s var(--ease), background .15s var(--ease); white-space:nowrap;}
+.nav-link:hover{color:var(--text); background:var(--surface-2);}
+.nav-link.active{color:var(--accent);}
+.nav-cta{font-size:13px; font-weight:500; color:#fff; background:var(--accent); padding:8px 16px; border-radius:var(--radius); cursor:pointer; border:none; font-family:var(--sans); transition:background .15s var(--ease); white-space:nowrap;}
+.nav-cta:hover{background:var(--accent-hover);}
+.theme-toggle{width:36px; height:36px; border:1px solid var(--border); background:var(--surface); border-radius:var(--radius); cursor:pointer; color:var(--text-3); display:grid; place-items:center; transition:border-color .15s var(--ease), color .15s var(--ease); font-size:14px;}
+.theme-toggle:hover{border-color:var(--border-strong); color:var(--text);}
+.hamburger{display:none; width:38px; height:38px; border:1px solid var(--border); background:var(--surface); border-radius:var(--radius); cursor:pointer; color:var(--text); font-size:18px;}
+
+/* centered two-column shell — header stays full width above */
+.shell{
+  display:grid; grid-template-columns:var(--rail-w) 1fr;
+  min-height:calc(100vh - 64px); align-items:stretch;
+  max-width:var(--shell-w); margin:0 auto; width:100%;
+}
+@media(min-width:1480px){
+  .shell{border-left:1px solid var(--border-soft); border-right:1px solid var(--border-soft);}
+}
+
+/* LEFT RAIL — full-height column, header to footer */
+.rail{border-right:1px solid var(--border);}
+.rail-stick{position:sticky; top:64px; max-height:calc(100vh - 64px); overflow:auto; display:flex; flex-direction:column; padding:56px 44px 44px;}
+.rail h1{margin-bottom:14px;}
+.rail .pos{font-size:14px; color:var(--text-3); line-height:1.6; margin-bottom:36px;}
+.rail-glance{border-top:1px solid var(--border-soft); margin-bottom:36px;}
+.rail-glance .rg{display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:13px 0; border-bottom:1px solid var(--border-soft);}
+.rail-glance .k{font-size:12px; color:var(--muted);}
+.rail-glance .v{font-size:13px; font-weight:600; color:var(--text); text-align:right; font-family:var(--serif); letter-spacing:-0.01em;}
+.rail-cta{display:flex; flex-direction:column; gap:10px;}
+.rail-cta .btn{justify-content:center;}
+.rail-foot{margin-top:auto; padding-top:36px; font-size:12px; color:var(--muted); line-height:1.7;}
+.rail-foot .sep{border-top:1px solid var(--border-soft); padding-top:20px; margin-top:20px;}
+
+/* RIGHT COLUMN */
+.main{min-width:0; display:flex; flex-direction:column;}
+.content{flex:1; padding:64px 72px 88px;}
+.content-inner{max-width:880px;}
+.page{display:none;}
+.page.active{display:block;}
+
+/* vertical rhythm */
+.content section{margin-bottom:88px;}
+.content section:last-child{margin-bottom:0;}
+.content section + section{border-top:1px solid var(--border-soft); padding-top:72px;}
+.content h2{margin-bottom:20px;}
+.lead{font-size:16px; line-height:1.65; color:var(--text-2); max-width:60ch; margin-bottom:0;}
+.measure{max-width:62ch; line-height:1.65;}
+.sub{font-size:14px; color:var(--text-3); line-height:1.65;}
+
+/* footer — right column */
+.footer{border-top:1px solid var(--border); padding:44px 72px; font-size:13px; color:var(--muted);}
+.footer-grid{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+.footer a{color:var(--text-3);}
+.footer a:hover{color:var(--accent);}
+.confidential{margin-top:28px; font-size:11px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em;}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+.btn{display:inline-flex; align-items:center; gap:8px; font-family:var(--sans); font-size:13px; font-weight:500; padding:11px 18px; border-radius:var(--radius); cursor:pointer; transition:background .15s var(--ease), border-color .15s var(--ease), color .15s var(--ease); border:1px solid transparent; line-height:1;}
+.btn-primary{background:var(--accent); color:#fff; border-color:var(--accent);}
+.btn-primary:hover{background:var(--accent-hover); border-color:var(--accent-hover); color:#fff;}
+.btn-ghost{background:transparent; color:var(--text); border-color:var(--border-strong);}
+.btn-ghost:hover{border-color:var(--accent); color:var(--accent);}
+.btn-arrow::after{content:"→"; font-size:14px;}
+
+.grid{display:grid; gap:20px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:880px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+
+.card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:36px; transition:border-color .15s var(--ease);}
+.card h3{margin-bottom:12px; transition:color .15s var(--ease);}
+.card h4{margin-bottom:10px;}
+.card p{color:var(--text-3); margin-bottom:0; font-size:13.5px; line-height:1.65;}
+.card-link{cursor:pointer;}
+.card-link:hover{border-color:var(--border-strong);}
+.card-link:hover h3{color:var(--accent);}
+.card-link .more{margin-top:24px; font-size:13px; font-weight:500; color:var(--accent); display:inline-flex; gap:6px; align-items:center;}
+.card .tagrow{margin-bottom:18px;}
+.card-quiet{background:var(--surface-2); border-color:transparent;}
+
+/* executive-summary dashboard */
+.dash{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+.dash-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:880px){.dash,.dash-3{grid-template-columns:1fr;}}
+.dash .card{display:flex; flex-direction:column; padding:28px;}
+.dash .card .dash-head{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:14px;}
+.dash .card .dash-head h3{margin:0;}
+.kv{border-top:1px solid var(--border-soft);}
+.kv li{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:9px 0; border-bottom:1px solid var(--border-soft); font-size:13px; color:var(--text-3); max-width:none;}
+.kv li .kvv{font-weight:600; color:var(--text); text-align:right; font-family:var(--serif); letter-spacing:-0.01em; font-variant-numeric:tabular-nums;}
+.frame.mini{aspect-ratio:16/9; padding:18px; margin-top:18px;}
+.dash .card .more{margin-top:auto; padding-top:18px;}
+
+/* document folders */
+.folders{display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:18px;}
+.folder{border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); overflow:hidden; transition:border-color .15s var(--ease), box-shadow .15s var(--ease);}
+.folder[open]{border-color:var(--border-strong);}
+.folder > summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:14px; padding:20px 22px;}
+.folder > summary::-webkit-details-marker{display:none;}
+.folder > summary:hover{background:var(--surface-2);}
+.folder .fic{flex:none; width:40px; height:40px; border-radius:var(--radius-sm); background:var(--accent-wash); color:var(--accent); display:grid; place-items:center;}
+.folder .fic svg{width:21px; height:21px;}
+.folder .fmeta{min-width:0; flex:1;}
+.folder .fname{font:600 15px/1.3 var(--serif); color:var(--text); letter-spacing:-0.01em; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.folder .fcount{font-size:12px; color:var(--muted); margin-top:4px;}
+.folder .fchev{flex:none; color:var(--faint); transition:transform .15s var(--ease); display:grid; place-items:center;}
+.folder .fchev svg{width:16px; height:16px;}
+.folder[open] .fchev{transform:rotate(90deg);}
+.folder .fbody{border-top:1px solid var(--border-soft); padding:6px 22px 14px;}
+.doc{display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid var(--border-soft); color:var(--text-2); text-decoration:none;}
+.doc:last-child{border-bottom:none;}
+.doc .dic{flex:none; color:var(--muted); display:grid; place-items:center;}
+.doc .dic svg{width:18px; height:18px;}
+.doc .dname{flex:1; min-width:0; font-size:13.5px;}
+.doc .dmeta{flex:none; font-size:11px; font-weight:600; color:var(--faint); text-transform:uppercase; letter-spacing:.04em;}
+a.doc{cursor:pointer; transition:color .15s var(--ease);}
+a.doc:hover .dname,a.doc:hover .dic{color:var(--accent);}
+a.doc:hover .dmeta{color:var(--accent);}
+.doc.empty{color:var(--faint); font-style:italic;}
+.doc.empty .dmeta{font-style:normal;}
+
+/* floating section-advance arrow — sticky at viewport bottom */
+.content section{scroll-margin-top:84px;}
+.flow-next{position:fixed; left:50%; bottom:26px; transform:translateX(-50%); z-index:110; display:grid; place-items:center; width:44px; height:44px; border-radius:50%; border:1px solid var(--border); background:var(--surface); color:var(--text-3); cursor:pointer; box-shadow:0 6px 22px rgba(0,0,0,.14); transition:opacity .2s var(--ease), transform .2s var(--ease), color .15s var(--ease), border-color .15s var(--ease);}
+.flow-next:hover{color:var(--accent); border-color:var(--accent); transform:translateX(-50%) translateY(2px);}
+.flow-next svg{width:18px; height:18px;}
+.flow-next.hide{opacity:0; pointer-events:none; transform:translateX(-50%) translateY(10px);}
+@media(max-width:980px){.flow-next{display:none;}}
+
+/* channel detail modal */
+.modal{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; place-items:center; z-index:240; padding:28px;}
+.modal.open{display:grid;}
+.modal-panel{position:relative; width:min(940px,94vw); max-height:92vh; overflow:auto; background:var(--surface); border:1px solid var(--border-strong); border-radius:10px; padding:52px 56px;}
+.modal-close{position:absolute; top:14px; right:16px; width:32px; height:32px; border:none; background:none; color:var(--muted); font-size:22px; cursor:pointer; border-radius:8px; line-height:1;}
+.modal-close:hover{background:var(--surface-2); color:var(--text);}
+.modal-panel h3{font-size:20px; margin-bottom:8px;}
+.modal-panel .m-sub{font-size:13.5px; color:var(--text-3); margin:0 0 20px; line-height:1.65; max-width:60ch;}
+.modal-panel h4{margin:34px 0 14px;}
+.modal-panel .table-wrap{margin:0 0 4px;}
+.mgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+.mgrid .mcell{background:var(--surface-2); border:1px solid var(--border-soft); border-radius:var(--radius); padding:20px 22px;}
+.mcell .mc-t{font-weight:600; color:var(--text); font-size:13.5px; margin:0 0 6px;}
+.mcell p{margin:0; font-size:13px; color:var(--text-3); line-height:1.65;}
+@media(max-width:700px){.mgrid{grid-template-columns:1fr;}}
+@media(max-width:700px){.modal-panel{padding:28px 22px;}}
+
+/* floating side nav (presentation jump menu) */
+.sidenav{position:fixed; right:20px; top:50%; transform:translateY(-50%); z-index:120; width:212px; background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:0 10px 34px rgba(0,0,0,.12); padding:10px; transition:right .25s var(--ease), bottom .25s var(--ease), top .25s var(--ease);}
+.sidenav-head{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:6px 8px 9px; border-bottom:1px solid var(--border-soft); margin-bottom:6px;}
+.sidenav-title{font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--faint);}
+.sidenav-close{width:24px; height:24px; border:none; background:none; color:var(--faint); cursor:pointer; border-radius:6px; font-size:17px; line-height:1; display:grid; place-items:center;}
+.sidenav-close:hover{background:var(--surface-2); color:var(--text);}
+.sidenav-list{display:flex; flex-direction:column; gap:1px; max-height:62vh; overflow:auto;}
+.sidenav-item{display:flex; align-items:center; gap:10px; width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:8px 9px; border-radius:7px; font:500 12.5px/1.2 var(--sans); color:var(--text-3); transition:background .15s var(--ease), color .15s var(--ease);}
+.sidenav-item:hover{background:var(--surface-2); color:var(--text);}
+.sidenav-item .dot{width:6px; height:6px; border-radius:50%; background:var(--border-strong); flex:none; transition:background .15s var(--ease);}
+.sidenav-item.active{background:var(--accent-wash); color:var(--accent);}
+.sidenav-item.active .dot{background:var(--accent);}
+.sidenav-fab{display:none; width:48px; height:48px; border-radius:50%; background:var(--accent); color:#fff; border:none; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,.18); place-items:center;}
+.sidenav-fab:hover{background:var(--accent-hover);}
+.sidenav-fab svg{width:22px; height:22px;}
+.sidenav.collapsed{right:22px; bottom:22px; top:auto; transform:none; width:auto; padding:0; border:none; background:none; box-shadow:none;}
+.sidenav.collapsed .sidenav-head,.sidenav.collapsed .sidenav-list{display:none;}
+.sidenav.collapsed .sidenav-fab{display:grid;}
+
+/* section pager (prev / next) — lives inside .content, aligns with .content-inner */
+.pager{display:flex; justify-content:space-between; gap:16px; max-width:880px; margin:0; padding:56px 0 8px;}
+.pager-btn{display:flex; flex-direction:column; gap:4px; min-width:190px; max-width:46%; background:none; border:none; padding:8px 0; cursor:pointer; font-family:var(--sans); text-align:left; align-items:flex-start;}
+.pager-btn.next{align-items:flex-end; text-align:right; margin-left:auto;}
+.pager-btn .pg-dir{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
+.pager-btn .pg-name{font:600 15px/1.25 var(--serif); color:var(--text); letter-spacing:-0.01em;}
+.pager-btn:hover .pg-name{color:var(--accent);}
+
+/* metrics */
+.metrics{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:40px;}
+.metric .num{font-family:var(--serif); font-weight:700; font-size:34px; color:var(--accent); letter-spacing:-0.02em; line-height:1;}
+.metric .lbl{font-size:12.5px; color:var(--muted); margin-top:10px; max-width:24ch; line-height:1.55;}
+
+/* fact cards — large figure + context sentence */
+.card .f-num{font-family:var(--serif); font-weight:700; font-size:30px; color:var(--accent); letter-spacing:-0.02em; line-height:1; margin-bottom:12px; font-variant-numeric:tabular-nums;}
+
+/* phase flow — chevron process strip (interlocked: each step tucks into the previous arrow, leaving a thin seam) */
+.flow{display:flex; margin:0;}
+.flow .fstep{flex:1; min-width:0; background:var(--surface-2); padding:34px 40px 34px 54px; clip-path:polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%);}
+.flow .fstep + .fstep{margin-left:-22px;}
+.flow .fstep:first-child{clip-path:polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); padding-left:32px;}
+.flow .fstep:last-child{clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 26px 50%); padding-right:32px;}
+.flow .fstep.is-done{background:var(--accent-wash);}
+.fstep .fs-n{font-family:var(--serif); font-weight:700; font-size:13px; color:var(--accent); letter-spacing:.04em; margin-bottom:8px;}
+.fstep .fs-d{font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:10px;}
+.fstep .fs-k{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px;}
+.fstep h4{margin:0;}
+.fstep p{font-size:12.5px; color:var(--text-3); line-height:1.6; margin:0;}
+@media(max-width:980px){
+  .flow{flex-direction:column;}
+  .flow .fstep + .fstep{margin-left:0; margin-top:6px;}
+  .flow .fstep,.flow .fstep:first-child,.flow .fstep:last-child{clip-path:none; border:1px solid var(--border-soft); border-radius:var(--radius); padding:22px 24px;}
+}
+
+/* glance band */
+.glance{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;}
+.glance > div{padding:22px 24px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);}
+.glance .g-lbl{font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--faint); font-weight:600; margin-bottom:8px;}
+.glance .g-val{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--text); letter-spacing:-0.01em;}
+
+/* chips / tags */
+.tag{display:inline-block; font-size:11px; font-weight:500; padding:3px 9px; border-radius:3px; background:var(--surface-2); border:1px solid var(--border); color:var(--text-3); margin:0 6px 6px 0;}
+.tag.accent{background:var(--accent-wash); border-color:transparent; color:var(--accent);}
+.chip{display:inline-block; font-size:11px; font-weight:600; padding:3px 10px; border-radius:3px;}
+.chip.ok{background:var(--ok-wash); color:var(--ok);}
+.chip.warn{background:var(--warn-wash); color:var(--warn);}
+.chip.danger{background:var(--danger-wash); color:var(--danger);}
+
+/* tables */
+.table{width:100%; border-collapse:collapse; font-size:13.5px;}
+.table th{text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-3); font-weight:600; background:var(--surface-2); padding:13px 18px; border-bottom:1px solid var(--border);}
+.table td{padding:14px 18px; border-bottom:1px solid var(--border-soft); color:var(--text-2);}
+.table tr:last-child td{border-bottom:none;}
+.table tfoot td{font-weight:600; color:var(--text); background:var(--surface-2);}
+.table-wrap{border:1px solid var(--border); border-radius:var(--radius); overflow-x:auto;}
+.row-hl td{background:var(--accent-wash); font-weight:600; color:var(--text);}
+
+/* image frames / gallery */
+.frame{aspect-ratio:4/3; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface-2); position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; padding:28px;}
+.frame.wide{aspect-ratio:21/9;}
+.frame.hero{aspect-ratio:3/2;}
+.frame .ft{font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:600; margin-bottom:9px;}
+.frame .fd{font-family:var(--serif); font-size:15px; color:var(--text-3); letter-spacing:-0.01em; max-width:30ch;}
+/* 3D tour embeds (before / after) */
+.tours{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media(max-width:760px){.tours{grid-template-columns:1fr;}}
+.tour .tour-h{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--text-3); margin:0 0 8px;}
+.embed{position:relative; aspect-ratio:16/9; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:var(--surface-2);}
+.embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+.gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px;}
+.gallery .frame{cursor:zoom-in; transition:border-color .15s var(--ease);}
+.gallery .frame:hover{border-color:var(--border-strong);}
+.frame.has-img{padding:0; background:var(--surface-2);}
+.frame.has-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+
+/* point list */
+.points{border-top:1px solid var(--border-soft);}
+.points li{padding:18px 0; border-bottom:1px solid var(--border-soft); font-size:14px; line-height:1.65; color:var(--text-2); max-width:62ch;}
+.points strong{color:var(--text);}
+
+/* status module (construction conditions, document register) */
+/* card header row — title + status chip, used outside the dashboard */
+.card-head{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:10px;}
+.card-head h3,.card-head h4{margin:0;}
+
+/* steps */
+.steps{counter-reset:step; border-top:1px solid var(--border-soft);}
+.step{counter-increment:step; display:grid; grid-template-columns:44px 1fr; gap:20px; padding:24px 0; border-bottom:1px solid var(--border-soft);}
+.step::before{content:counter(step,decimal-leading-zero); font-family:var(--serif); font-weight:700; color:var(--accent); font-size:15px; padding-top:2px;}
+.step h4{margin-bottom:7px;}
+.step p{font-size:13.5px; color:var(--text-3); margin:0; line-height:1.65; max-width:58ch;}
+
+/* summary strip */
+.studies{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; margin-top:36px;}
+.study{padding:26px 28px; border-right:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft);}
+.study:last-child{border-right:none;}
+.study .s-k{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--faint); margin-bottom:10px;}
+.study .s-v{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--text); letter-spacing:-0.01em; margin-bottom:8px;}
+.study .s-d{font-size:12px; color:var(--muted); line-height:1.6;}
+
+/* FAQ */
+.faq{border-bottom:1px solid var(--border-soft);}
+.faq summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:18px; padding:20px 0; font:600 15px/1.3 var(--serif); color:var(--text); letter-spacing:-0.01em;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+"; font:400 18px var(--sans); color:var(--faint); transition:transform .15s var(--ease);}
+.faq[open] summary::after{transform:rotate(45deg);}
+.faq p{font-size:13.5px; color:var(--text-3); line-height:1.7; margin:0 0 20px; max-width:62ch;}
+
+/* lightbox */
+.lightbox{position:fixed; inset:0; background:rgba(0,0,0,.78); display:none; place-items:center; z-index:300; padding:32px;}
+.lightbox.open{display:grid;}
+.lightbox .lb-frame{width:min(900px,92vw); aspect-ratio:16/10; background:var(--surface-2); border:1px solid var(--border-strong); border-radius:var(--radius); display:grid; place-items:center; text-align:center; padding:32px;}
+.lightbox .lb-close{position:absolute; top:22px; right:26px; background:none; border:none; color:#fff; font-size:30px; cursor:pointer; line-height:1;}
+.lb-fig{margin:0; max-width:min(1100px,94vw);}
+.lb-fig img{display:block; max-width:100%; max-height:82vh; margin:0 auto; border-radius:var(--radius);}
+.lb-fig figcaption{color:#e8e5e1; font-size:12px; text-align:center; margin-top:14px; letter-spacing:.01em;}
+
+/* tabular figures */
+.metric .num,.rail-glance .v,.glance .g-val,.table td,.s-d{font-variant-numeric:tabular-nums;}
+
+/* dark-mode imagery dim */
+[data-theme="dark"] .frame img{filter:brightness(.92);}
+
+/* page crossfade */
+.page.active{animation:pageIn .18s var(--ease);}
+@keyframes pageIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none;}}
+
+/* note chip — optional status marker */
+.todo-note{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--warn); background:var(--warn-wash); padding:4px 10px; border-radius:3px; margin-bottom:14px;}
+.form-note{font-size:12px; color:var(--muted); line-height:1.6;}
+
+/* print tear-sheets */
+@media print{
+  .topbar,.hamburger,.theme-toggle,.btn,.rail-cta,.lightbox,.sidenav,.pager,.modal,.flow-next{display:none!important;}
+  body{background:#fff; color:#000; font-size:11pt;}
+  .shell{display:block; max-width:none; border:none;}
+  .rail{border:none; border-bottom:1.5pt solid #000;}
+  .rail-stick{position:static; max-height:none; overflow:visible; padding:0 0 14pt;}
+  .rail-foot{margin-top:10pt; padding-top:10pt;}
+  .content{padding:14pt 0;}
+  .content-inner{max-width:none;}
+  .content section{margin-bottom:16pt;}
+  .content section + section{border-top:1pt solid #ccc; padding-top:14pt;}
+  .card,.table-wrap,.glance,.studies,.frame{break-inside:avoid;}
+  .reveal{opacity:1!important; transform:none!important;}
+  a{color:#000;}
+  .footer{border-top:1pt solid #000; padding:10pt 0;}
+  .confidential{color:#444;}
+}
+
+/* reveal */
+.reveal{opacity:0; transform:translateY(14px); transition:opacity .5s var(--ease), transform .5s var(--ease);}
+.reveal.in{opacity:1; transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none;} html{scroll-behavior:auto;}}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1180px){
+  :root{--rail-w:330px;}
+  .content{padding:52px 48px 72px;}
+  .rail-stick{padding:44px 34px 36px;}
+  .footer{padding:36px 48px;}
+  .nav-link{padding:8px 9px;}
+}
+@media(max-width:980px){
+  .shell{grid-template-columns:1fr;}
+  .rail{border-right:none; border-bottom:1px solid var(--border);}
+  .rail-stick{position:static; max-height:none; padding:40px 24px;}
+  .rail-foot{margin-top:32px;}
+  .content{padding:44px 24px 64px;}
+  .footer{padding:36px 24px;}
+  .topbar-inner{padding:0 20px;}
+  .nav-links{position:fixed; inset:64px 0 auto 0; flex-direction:column; align-items:stretch; gap:2px; background:var(--bg); border-bottom:1px solid var(--border); padding:12px 18px 18px; margin:0; transform:translateY(-130%); transition:transform .2s var(--ease); max-height:calc(100vh - 64px); overflow:auto; z-index:90;}
+  .nav-links.open{transform:translateY(0);}
+  .nav-link{text-align:left; padding:12px;}
+  .nav-right{margin-left:auto; gap:8px;}
+  .hamburger{display:block;}
+  .sidenav{display:none!important;}
+}
+</style>
+<style>
+/* ============================================================
+   AGM REPUTATION — ADDED COMPONENTS
+   Built on the same tokens as the base template.
+   ============================================================ */
+
+/* hero band (overview) */
+.hero{position:relative; border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(135deg, var(--accent-wash), var(--surface) 62%); padding:52px 48px; overflow:hidden;}
+.hero .h-eyebrow{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin:0 0 16px;}
+.hero h2{font-size:32px; line-height:1.15; max-width:20ch; margin:0 0 18px;}
+.hero p{max-width:56ch; margin:0 0 26px; font-size:15.5px; line-height:1.65; color:var(--text-2);}
+@media(max-width:600px){.hero{padding:36px 26px;} .hero h2{font-size:26px;}}
+
+/* the 2.2 -> 4.5 jump */
+.jump{display:inline-flex; align-items:center; gap:16px; flex-wrap:wrap;}
+.jump .j-pill{display:inline-flex; flex-direction:column; align-items:center; gap:2px; font-family:var(--serif); padding:12px 22px; border-radius:14px; min-width:96px;}
+.jump .j-pill .jp-n{font-weight:700; font-size:26px; letter-spacing:-.02em; line-height:1;}
+.jump .j-pill .jp-l{font-family:var(--sans); font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; opacity:.85;}
+.jump .j-before{background:var(--danger-wash); color:var(--danger);}
+.jump .j-after{background:var(--accent-wash); color:var(--accent);}
+.jump .j-arrow{color:var(--faint); font-size:22px; font-weight:700;}
+
+/* star ratings — precise partial fill via overlay */
+.rstars{position:relative; display:inline-block; font-size:17px; line-height:1; color:var(--border-strong); letter-spacing:1px; font-family:Arial, sans-serif;}
+.rstars::before{content:"\2605\2605\2605\2605\2605";}
+.rstars .fill{position:absolute; left:0; top:0; overflow:hidden; white-space:nowrap; color:#f5a623;}
+.rstars .fill::before{content:"\2605\2605\2605\2605\2605";}
+.rstars.lg{font-size:24px;}
+
+/* before / after slider */
+.ba{position:relative; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:var(--surface-2); user-select:none;}
+.ba-pane{position:relative; aspect-ratio:16/10;}
+.ba-layer{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px; gap:12px;}
+.ba-after{background:var(--surface);}
+.ba-before{background:linear-gradient(180deg, var(--danger-wash), var(--surface-2)); clip-path:inset(0 calc(100% - var(--p,50%)) 0 0);}
+.ba-layer img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:left top;}
+.ba-score{font-family:var(--serif); font-weight:700; font-size:54px; line-height:1; letter-spacing:-.02em;}
+.ba-after .ba-score{color:var(--accent);} .ba-before .ba-score{color:var(--danger);}
+.ba-name{font-family:var(--serif); font-weight:600; font-size:15px; color:var(--text); letter-spacing:-.01em;}
+.ba-cap{font-size:12.5px; color:var(--text-3); max-width:34ch; line-height:1.5;}
+.ba-tag{position:absolute; top:12px; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:5px 10px; border-radius:3px; z-index:4;}
+.ba-tag.before{left:12px; background:var(--danger-wash); color:var(--danger);}
+.ba-tag.after{right:12px; background:var(--accent-wash); color:var(--accent);}
+.ba-handle{position:absolute; top:0; bottom:0; left:var(--p,50%); width:2px; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.18); transform:translateX(-1px); pointer-events:none; z-index:5;}
+.ba-grip{position:absolute; top:50%; left:var(--p,50%); transform:translate(-50%,-50%); width:42px; height:42px; border-radius:50%; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.28); display:grid; place-items:center; color:var(--accent); pointer-events:none; z-index:6;}
+.ba-grip svg{width:22px; height:22px;}
+.ba-range{position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:7;}
+[data-theme="dark"] .ba-handle,[data-theme="dark"] .ba-grip{background:#e9e6e2;}
+
+/* review grid */
+.reviews{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; align-items:start;}
+.review{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; display:flex; flex-direction:column;}
+.review.critical{border-color:var(--border-strong);}
+.review-head{display:flex; align-items:center; gap:12px; margin-bottom:11px;}
+.review-avatar{width:38px; height:38px; border-radius:50%; background:var(--accent-wash); color:var(--accent); display:grid; place-items:center; font-family:var(--serif); font-weight:700; font-size:15px; flex:none;}
+.review.critical .review-avatar{background:var(--surface-2); color:var(--muted);}
+.review-who{min-width:0; flex:1;}
+.review-name{font-weight:600; color:var(--text); font-size:14px; letter-spacing:-.01em;}
+.review-meta{font-size:11.5px; color:var(--muted); margin-top:1px;}
+.review-new{align-self:flex-start; font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); background:var(--accent-wash); padding:3px 7px; border-radius:3px; flex:none;}
+.review-stars{margin-bottom:10px; align-self:flex-start;}
+.review-body{font-size:13px; line-height:1.6; color:var(--text-3); margin:0;}
+.review-reply{margin-top:14px; padding:13px 15px; background:var(--surface-2); border-radius:var(--radius); border-left:2px solid var(--accent);}
+.review-reply .rr-h{font-size:11px; font-weight:700; color:var(--text-2); margin-bottom:6px; display:flex; gap:7px; align-items:center;}
+.review-reply .rr-h .rr-badge{font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); background:var(--surface); border:1px solid var(--border); padding:1px 6px; border-radius:3px;}
+.review-reply p{font-size:12px; color:var(--text-3); line-height:1.6; margin:0;}
+
+/* discussion prompt */
+.prompt{border:1px dashed var(--border-strong); border-radius:var(--radius); padding:22px 26px; background:var(--surface-2); display:flex; gap:16px; align-items:flex-start;}
+.prompt .p-ic{flex:none; width:36px; height:36px; border-radius:50%; background:var(--accent-wash); color:var(--accent); display:grid; place-items:center;}
+.prompt .p-ic svg{width:19px; height:19px;}
+.prompt .p-t{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); margin-bottom:6px;}
+.prompt p{margin:0; font-size:15px; color:var(--text-2); font-family:var(--serif); line-height:1.5; letter-spacing:-.01em;}
+
+/* momentum chart */
+.chart{border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:24px 22px 14px;}
+.chart svg{display:block; width:100%; height:auto;}
+.chart-cap{font-size:12.5px; color:var(--text-3); line-height:1.6; margin:14px 4px 0; max-width:70ch;}
+.chart-key{display:flex; gap:20px; flex-wrap:wrap; margin:0 4px 4px; padding-top:12px; border-top:1px solid var(--border-soft);}
+.chart-key .ck{display:flex; align-items:center; gap:8px; font-size:12px; color:var(--text-3);}
+.chart-key .ck .swatch{width:22px; height:0; border-top:2px solid var(--accent);}
+.chart-key .ck .swatch.proj{border-top-style:dashed;}
+
+/* pocket takeaway card */
+.pocket{position:relative; border:1.5px dashed var(--border-strong); border-radius:var(--radius); padding:30px 32px; background:var(--surface); max-width:560px;}
+.pocket .pk-scissor{position:absolute; top:-11px; left:24px; background:var(--surface); padding:0 8px; color:var(--faint); font-size:15px;}
+.pocket h4{margin-bottom:4px;}
+.pocket .pk-sub{font-size:12px; color:var(--muted); margin-bottom:18px;}
+.pocket .pk-group{margin-bottom:16px;}
+.pocket .pk-group:last-child{margin-bottom:0;}
+.pocket .pk-label{font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); margin-bottom:8px;}
+.pocket ul{border:none;}
+.pocket ul li{padding:5px 0; font-size:13px; color:var(--text-2); border:none; max-width:none; display:flex; gap:9px; align-items:baseline;}
+.pocket ul li::before{content:"\2713"; color:var(--accent); font-weight:700; flex:none;}
+
+/* goal progress */
+.goalbar{border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:24px 26px;}
+.goalbar .gb-head{display:flex; justify-content:space-between; align-items:baseline; gap:14px; margin-bottom:14px;}
+.goalbar .gb-head h4{margin:0;}
+.goalbar .gb-count{font-family:var(--serif); font-weight:700; color:var(--accent); font-size:18px; letter-spacing:-.01em;}
+.progress{height:12px; background:var(--surface-2); border:1px solid var(--border-soft); border-radius:999px; overflow:hidden;}
+.progress .bar{height:100%; background:var(--accent); border-radius:999px; min-width:8px;}
+.goalbar .gb-foot{font-size:12px; color:var(--muted); margin-top:10px;}
+
+/* small helper: soft data-to-confirm note reused from template as .todo-note */
+.dim-num{opacity:.55;}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" data-route="overview" role="button" tabindex="0">
+      AGM&nbsp;Reputation&nbsp;Management <span class="mark">AGM</span>
+    </div>
+    <nav class="nav-links" id="navlinks" aria-label="Primary">
+      <button class="nav-link" data-route="overview">Overview</button>
+      <button class="nav-link" data-route="agenda">Agenda</button>
+      <button class="nav-link" data-route="progress">Where We Stand</button>
+      <button class="nav-link" data-route="program">The Program</button>
+      <button class="nav-link" data-route="recognition">Recognition &amp; Goals</button>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-cta" data-route="portal">Reputation Portal</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== SHELL ===================== -->
+<div class="shell">
+  <aside class="rail" aria-label="Page summary">
+    <div class="rail-stick" id="rail"></div>
+  </aside>
+
+  <div class="main">
+    <main class="content" id="content">
+      <div class="content-inner">
+
+      <!-- ============ OVERVIEW ============ -->
+      <div class="page" id="page-overview">
+        <section class="reveal">
+          <div class="hero">
+            <p class="h-eyebrow">AGM Reputation Management · Updates &amp; Reminders</p>
+            <h2>Our reputation has become one of our strongest assets.</h2>
+            <p>Over the past year, our online reputation has grown into a real driver of new business and trust with tenants and owners alike. Today's briefing is a quick refresher on the program, and a chance to recognize the people behind the results.</p>
+            <div class="jump">
+              <span class="j-pill j-before"><span class="jp-n">2.2★</span><span class="jp-l">Then · AGM Inc</span></span>
+              <span class="j-arrow">→</span>
+              <span class="j-pill j-after"><span class="jp-n">4.5★</span><span class="jp-l">Now · AGM Real Estate Group</span></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">The numbers today</p>
+          <h2>At a Glance</h2>
+          <span class="todo-note">Bracketed figures to confirm</span>
+          <div class="grid grid-3" style="margin-top:8px;">
+            <div class="card"><div class="f-num"><span class="dim-num">[4.5]</span>★</div><p>Our current Google rating on the AGM Real Estate Group profile.</p></div>
+            <div class="card"><div class="f-num"><span class="dim-num">[8]</span></div><p>Total reviews on the new profile, and climbing steadily.</p></div>
+            <div class="card"><div class="f-num"><span class="dim-num">[7 of 8]</span></div><p>Five-star reviews left by tenants and owners.</p></div>
+            <div class="card"><div class="f-num">Every review</div><p>Receives a professional, personal reply from AGM.</p></div>
+            <div class="card"><div class="f-num">4+★</div><p>The standard we hold across every AGM profile.</p></div>
+            <div class="card"><div class="f-num">10 / mo</div><p>Our team goal for new five-star reviews.</p></div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Why it matters</p>
+          <h2>Reviews Move the Business</h2>
+          <p class="lead" style="margin-bottom:28px;">For most tenants and owners, our reputation is the first conversation we have with them, long before a call or a tour.</p>
+          <div class="grid grid-2">
+            <div class="card"><div class="f-num">98%</div><p>of renters say online reviews are important to their apartment search. Our profile is the first impression we make. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Apartments.com renter survey</span></p></div>
+            <div class="card"><div class="f-num">5–9%</div><p>more revenue is linked to each one-star gain in rating. Reputation is business development. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Harvard Business School (Luca)</span></p></div>
+            <div class="card"><div class="f-num">71%</div><p>of renters say a negative review would stop them from even scheduling a tour. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Renter survey data</span></p></div>
+            <div class="card"><div class="f-num">55%</div><p>won't consider a property with fewer than four ratings. Volume and freshness matter as much as the score, which is why we keep asking. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Renter survey data</span></p></div>
+          </div>
+          <div class="card card-quiet" style="margin-top:20px;">
+            <h4>The compounding effect</h4>
+            <p>When a prospect lands on a profile full of recent, positive reviews, two things tend to happen. Happy tenants feel comfortable adding their own, and the occasional frustrated voice is far less likely to post into a wall of praise. Momentum protects momentum.</p>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Today's briefing</p>
+          <h2>What We'll Cover</h2>
+          <p class="measure sub" style="margin-bottom:28px;">Each panel opens its full section.</p>
+          <div class="dash">
+            <div class="card card-link" data-route="progress">
+              <div class="dash-head"><h3>Where We Stand</h3><span class="chip ok">2.2 → 4.5★</span></div>
+              <p style="margin-bottom:0;">The before-and-after, the momentum behind it, and what tenants are saying.</p>
+              <span class="more" style="margin-top:18px;">See the transformation →</span>
+            </div>
+            <div class="card card-link" data-route="program">
+              <div class="dash-head"><h3>The Program</h3><span class="chip ok">The playbook</span></div>
+              <p style="margin-bottom:0;">Our objectives, the ground rules, and the everyday habits that earn five stars.</p>
+              <span class="more" style="margin-top:18px;">How it works →</span>
+            </div>
+            <div class="card card-link" data-route="recognition">
+              <div class="dash-head"><h3>Recognition &amp; Goals</h3><span class="chip ok">The team</span></div>
+              <p style="margin-bottom:0;">Celebrating our standouts and setting the pace for the months ahead.</p>
+              <span class="more" style="margin-top:18px;">Who's leading →</span>
+            </div>
+            <div class="card card-link" data-route="portal">
+              <div class="dash-head"><h3>Reputation Portal</h3><span class="chip ok">The tools</span></div>
+              <p style="margin-bottom:0;">Flyers, QR codes, a request generator, and a built-in tracker.</p>
+              <span class="more" style="margin-top:18px;">The tools →</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ AGENDA ============ -->
+      <div class="page" id="page-agenda">
+        <section class="reveal">
+          <p class="eyebrow">Today's meeting · roughly 25 minutes</p>
+          <h2>Meeting Agenda</h2>
+          <p class="measure sub" style="margin-bottom:28px;">A refresher on the Reputation Management Program, and a moment to recognize outstanding work. Here is how we'll spend our time together.</p>
+          <div class="steps">
+            <div class="step"><div><h4>Welcome &amp; Purpose <span class="chip ok" style="margin-left:6px;">3 min · Soraya</span></h4><p>Why we're here and what we'll cover today.</p></div></div>
+            <div class="step"><div><h4>Why Reviews Matter <span class="chip ok" style="margin-left:6px;">5 min · Group</span></h4><p>An open conversation with the room: what does our reputation do for us, and for our tenants and owners?</p></div></div>
+            <div class="step"><div><h4>Program Overview <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Our objectives, the ground rules, and how reviews are tracked and recognized.</p></div></div>
+            <div class="step"><div><h4>Best Practices <span class="chip ok" style="margin-left:6px;">5–7 min · Gerry &amp; Leary</span></h4><p>The habits that earn five stars, and the natural moments to ask.</p></div></div>
+            <div class="step"><div><h4>Employee Recognition <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Celebrating the team members our tenants name again and again.</p></div></div>
+            <div class="step"><div><h4>Team Goals Ahead <span class="chip ok" style="margin-left:6px;">3 min · Leary</span></h4><p>Where we're headed, and how we get there together.</p></div></div>
+            <div class="step"><div><h4>Questions &amp; Discussion <span class="chip ok" style="margin-left:6px;">5 min · Leary</span></h4><p>Your ideas, your wins, and any challenges you've run into.</p></div></div>
+            <div class="step"><div><h4>Closing <span class="chip ok" style="margin-left:6px;">2 min · Soraya</span></h4><p>A thank-you, and a look at the road ahead.</p></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ WHERE WE STAND ============ -->
+      <div class="page" id="page-progress">
+        <section class="reveal">
+          <p class="eyebrow">Where we were → where we are</p>
+          <h2>From 2.2 to 4.5 Stars</h2>
+          <p class="measure sub" style="margin-bottom:24px;">The old AGM Inc profile sat at 2.2 stars, weighed down by negative comments that were the first thing anyone saw. The new AGM Real Estate Group profile tells a very different story. Drag the slider to see the change.</p>
+          <div class="ba" style="--p:50%;">
+            <div class="ba-pane">
+              <div class="ba-layer ba-after">
+                <!-- TO LOAD: replace this block's contents with <img src="images/profile-after.png" alt="AGM Real Estate Group Google profile, 4.5 stars" /> -->
+                <div class="ba-score">4.5★</div>
+                <div class="rstars lg"><span class="fill" style="width:90%"></span></div>
+                <div class="ba-name">AGM Real Estate Group, LLC</div>
+                <div class="ba-cap">Steady five-star reviews that name our team, with a reply on every one.</div>
+              </div>
+              <div class="ba-layer ba-before">
+                <!-- TO LOAD: replace this block's contents with <img src="images/profile-before.png" alt="AGM Inc old Google profile, 2.2 stars" /> -->
+                <div class="ba-score">2.2★</div>
+                <div class="rstars lg"><span class="fill" style="width:44%"></span></div>
+                <div class="ba-name">AGM Inc · old profile</div>
+                <div class="ba-cap">A low rating and negative comments were the first thing prospects saw.</div>
+              </div>
+              <span class="ba-tag before">Before</span>
+              <span class="ba-tag after">After</span>
+              <div class="ba-handle"></div>
+              <div class="ba-grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+              <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal the before or after profile" />
+            </div>
+          </div>
+          <p class="form-note" style="margin-top:14px;"><span class="todo-note">To load</span> Swap each panel for the actual profile screenshot. Drag the handle, or focus it and use the arrow keys.</p>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">The momentum effect</p>
+          <h2>Why Consistency Beats Perfection</h2>
+          <p class="measure sub" style="margin-bottom:22px;">Every rating is really a running average. Early on, a single tough review swings it hard. With enough good reviews behind it, each dip gets smaller and recovers faster.</p>
+          <div class="chart">
+            <svg viewBox="0 0 720 360" role="img" aria-label="Line chart of our average star rating over time, rising from 2.2 to 4.5 with a small dip when a one-star review arrived, and a projected path continuing upward with steady momentum.">
+              <title>Our average rating over time</title>
+              <!-- gridlines -->
+              <g stroke="var(--border-soft)" stroke-width="1">
+                <line x1="48" y1="24" x2="696" y2="24"/>
+                <line x1="48" y1="83.2" x2="696" y2="83.2"/>
+                <line x1="48" y1="142.4" x2="696" y2="142.4"/>
+                <line x1="48" y1="201.6" x2="696" y2="201.6"/>
+                <line x1="48" y1="260.8" x2="696" y2="260.8"/>
+              </g>
+              <line x1="48" y1="320" x2="696" y2="320" stroke="var(--border-strong)" stroke-width="1.5"/>
+              <!-- y labels -->
+              <g style="font:600 11px var(--sans); fill:var(--muted);" text-anchor="end">
+                <text x="40" y="28">5</text><text x="40" y="87">4</text><text x="40" y="146">3</text><text x="40" y="205">2</text><text x="40" y="265">1</text>
+              </g>
+              <!-- divider: actual vs projected -->
+              <line x1="560" y1="24" x2="560" y2="320" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 4"/>
+              <!-- area under actual -->
+              <path d="M48,320 L48,189.76 L140,24 L230,24 L320,83.2 L410,71.36 L500,62.48 L560,53.6 L560,320 Z" fill="var(--accent-wash)" opacity="0.6"/>
+              <!-- projected (dotted) -->
+              <polyline points="560,53.6 620,50.64 668,56.6 696,44.72" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" opacity="0.75"/>
+              <!-- actual line -->
+              <polyline points="48,189.76 140,24 230,24 320,83.2 410,71.36 500,62.48 560,53.6" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              <!-- dots -->
+              <g fill="var(--accent)">
+                <circle cx="140" cy="24" r="3.5"/><circle cx="230" cy="24" r="3.5"/><circle cx="410" cy="71.36" r="3.5"/><circle cx="500" cy="62.48" r="3.5"/>
+              </g>
+              <circle cx="48" cy="189.76" r="5" fill="var(--danger)"/>
+              <circle cx="320" cy="83.2" r="5" fill="var(--danger)"/>
+              <circle cx="560" cy="53.6" r="6" fill="var(--accent)" stroke="var(--surface)" stroke-width="2.5"/>
+              <!-- annotations -->
+              <g style="font:600 11px var(--sans);">
+                <text x="56" y="210" style="fill:var(--muted);">Where we started</text>
+                <text x="56" y="226" style="font:700 12px var(--serif); fill:var(--text-2);">2.2★ · AGM Inc</text>
+                <text x="320" y="112" text-anchor="middle" style="fill:var(--danger);">A 1★ review</text>
+                <text x="320" y="127" text-anchor="middle" style="fill:var(--muted);">a small, brief dip</text>
+                <text x="556" y="42" text-anchor="end" style="font:700 12px var(--serif); fill:var(--accent);">Today · 4.5★</text>
+                <text x="694" y="98" text-anchor="end" style="fill:var(--muted);">With steady</text>
+                <text x="694" y="112" text-anchor="end" style="fill:var(--muted);">momentum →</text>
+              </g>
+              <!-- x captions -->
+              <g style="font:600 10.5px var(--sans); fill:var(--faint);" text-anchor="middle">
+                <text x="300" y="342">the past year</text>
+                <text x="628" y="342">the months ahead</text>
+              </g>
+            </svg>
+            <div class="chart-key">
+              <span class="ck"><span class="swatch"></span>Our rating so far</span>
+              <span class="ck"><span class="swatch proj"></span>Projected with steady momentum</span>
+            </div>
+            <p class="chart-cap">The lesson for the team: one tough review is not a setback, it is a dip. Keep the good reviews coming and the trajectory keeps climbing. Consistency beats perfection. <span class="dim-num">(Illustrative trajectory; running-average shape based on our 8 reviews to date.)</span></p>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">The math of momentum</p>
+          <h2>Volume Is Protection</h2>
+          <p class="measure sub" style="margin-bottom:24px;">The same single one-star review does very different damage depending on how many good reviews stand behind it.</p>
+          <div class="grid grid-2">
+            <div class="card"><div class="f-num">4.5★</div><p><strong>One 1★ review at 8 reviews.</strong> With only a handful of reviews, a single bad one pulls the whole average down to 4.5. That is where we are today.</p></div>
+            <div class="card"><div class="f-num">4.9★</div><p><strong>The same 1★ review at 80 reviews.</strong> With a deep, steady stream behind it, that same review barely registers. This is exactly why we keep asking.</p></div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Recent reviews</p>
+          <h2>What Tenants Are Saying</h2>
+          <p class="measure sub" style="margin-bottom:24px;">A sample of recent reviews on the AGM Real Estate Group profile. Notice how often our team is named.</p>
+          <div class="reviews">
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">G</span><span class="review-who"><div class="review-name">Genesis Henry-Gonzalez</div><div class="review-meta">3 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Great leasing and moving experience with Shahdad from the AGM Real Estate Group. He made the move-in process very knowledgeable, with good communication. Very friendly and professional!</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">E</span><span class="review-who"><div class="review-name">Emmanuel Felarca</div><div class="review-meta">Local Guide · 9 reviews · 13 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">AGM has been excellent in the management of our unit in the Bolero Condominium. There have been no issues since they took over. Alyssa Henne is the AGM property manager, and she is very knowledgeable in her responsibilities, friendly, and easy to talk to. We are lucky to have her on our side.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Casey Woods</div><div class="review-meta">18 hours ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad was an outstanding professional to work with and helped me achieve my goal of getting into my first apartment. I highly recommend him without hesitation.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Aaron Pablo-Scott</div><div class="review-meta">1 review · 2 days ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad made the move-in process easy and stress-free. Always friendly, responsive, and great to work with!</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">M</span><span class="review-who"><div class="review-name">Melissa Webb</div><div class="review-meta">4 reviews · a week ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">I moved into the new Quil Crossing Apartments and it was a smooth process working with Shahdad. He answered all my questions and was very patient. If there was any issue with the move-in, he made sure to get it taken care of.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">K</span><span class="review-who"><div class="review-name">Kamaya Craig</div><div class="review-meta">3 reviews · 1 photo · a week ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Shahdad has been very helpful throughout the process of getting into the Quil Crossing Apartments, and they are good quality.</p>
+            </div>
+            <div class="review">
+              <div class="review-head"><span class="review-avatar">C</span><span class="review-who"><div class="review-name">Celum Hatch</div><div class="review-meta">1 review · 2 weeks ago</div></span><span class="review-new">New</span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:100%"></span></div>
+              <p class="review-body">Great customer service and great hospitality. Really thankful for the opportunity to live in the apartments and to be taken care of by such a great company and staff.</p>
+              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>We really appreciate this, Celum. Knowing our staff made you feel well taken care of is exactly what we aim for. Thank you for being a resident with AGM.</p></div>
+            </div>
+            <div class="review critical">
+              <div class="review-head"><span class="review-avatar">A</span><span class="review-who"><div class="review-name">Anonymous</div><div class="review-meta">1 review · 2 weeks ago</div></span></div>
+              <div class="review-stars rstars"><span class="fill" style="width:20%"></span></div>
+              <p class="review-body">Apartment from AGM contained hazardous mold and gave me breathing issues. Call the city to get inspections of units before signing a lease.</p>
+              <div class="review-reply"><div class="rr-h">AGM Real Estate Group, LLC <span class="rr-badge">Owner</span></div><p>AGM takes every resident's experience seriously and is committed to addressing concerns. While we are unable to connect this anonymous review to a specific record, we encourage any current or former resident to reach out to our office directly so we can look into the matter.</p></div>
+            </div>
+          </div>
+          <p class="form-note" style="margin-top:16px;">The one critical review stays in view on purpose. Our calm, professional reply beneath it is exactly how we handle a concern in public.</p>
+        </section>
+      </div>
+
+      <!-- ============ THE PROGRAM ============ -->
+      <div class="page" id="page-program">
+        <section class="reveal">
+          <p class="eyebrow">Program overview</p>
+          <h2>Our Objectives</h2>
+          <div class="grid grid-2">
+            <div class="card"><h4>Hold 4+ stars, everywhere</h4><p>Keep a 4+ star rating across every AGM profile, so we clear the bar prospects set before they will even consider a property.</p></div>
+            <div class="card"><h4>Show up and stand out</h4><p>Strengthen our search visibility and first impressions, so tenants and owners find us and like what they see.</p></div>
+            <div class="card"><h4>Keep a steady stream</h4><p>Build a genuine, ongoing flow of reviews from tenants and owners, so our rating reflects the real quality of our work.</p></div>
+            <div class="card"><h4>Recognize the team</h4><p>Celebrate and reward the people earning the reviews, because the results are theirs.</p></div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Ground rules</p>
+          <h2>How We Ask, Responsibly</h2>
+          <p class="measure sub" style="margin-bottom:24px;">Asking for reviews is simple when we keep to a few principles.</p>
+          <div class="grid grid-2">
+            <div class="card"><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
+            <div class="card"><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
+            <div class="card"><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
+            <div class="card"><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From Great Service to a Great Review</h2>
+          <div class="steps">
+            <div class="step"><div><h4>Deliver a great experience</h4><p>Everything starts with service worth talking about, for tenants and owners alike.</p></div></div>
+            <div class="step"><div><h4>Ask at the natural moment</h4><p>When something goes well, that is the cue to invite a review.</p></div></div>
+            <div class="step"><div><h4>Send the link</h4><p>Make it effortless with a direct link or a QR code from the Reputation Portal.</p></div></div>
+            <div class="step"><div><h4>Track and recognize</h4><p>Reviews are logged, and standout performance is celebrated with the team.</p></div></div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">The playbook</p>
+          <h2>Habits That Earn Five Stars</h2>
+          <ul class="points">
+            <li><strong>Make every touchpoint easy.</strong> Quick, clear responses to maintenance requests, applications, and questions go a long way.</li>
+            <li><strong>Set expectations and follow through.</strong> Give realistic timelines on repairs, approvals, and move-ins, then meet them.</li>
+            <li><strong>Own concerns quickly.</strong> A problem handled well is often the very thing that earns the review.</li>
+            <li><strong>Keep it personal and professional.</strong> Use names, follow up, and close the loop.</li>
+            <li><strong>Leave people feeling cared for</strong> before you wrap up any interaction.</li>
+          </ul>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">The review-moment map</p>
+          <h2>The Natural Moments to Ask</h2>
+          <p class="measure sub" style="margin-bottom:24px;">These are moments in the work you already do. When one goes well, that is your cue.</p>
+          <div class="flow">
+            <div class="fstep is-done"><div class="fs-n">01</div><div class="fs-d">Leasing</div><div class="fs-k"><h4>A positive tour</h4></div><p>They loved the unit and the walkthrough went smoothly.</p></div>
+            <div class="fstep is-done"><div class="fs-n">02</div><div class="fs-d">Leasing</div><div class="fs-k"><h4>Application signed</h4></div><p>A clear, easy approval and signing experience.</p></div>
+            <div class="fstep is-done"><div class="fs-n">03</div><div class="fs-d">Onboarding</div><div class="fs-k"><h4>A smooth move-in</h4></div><p>Keys in hand, everything ready, a warm welcome.</p></div>
+            <div class="fstep is-done"><div class="fs-n">04</div><div class="fs-d">Service</div><div class="fs-k"><h4>Concern resolved</h4></div><p>A maintenance request handled quickly and well.</p></div>
+            <div class="fstep is-done"><div class="fs-n">05</div><div class="fs-d">Retention</div><div class="fs-k"><h4>Renewal submitted</h4></div><p>A happy resident choosing to stay another year.</p></div>
+          </div>
+          <div class="card card-quiet" style="margin-top:24px;"><p style="margin:0;"><strong style="color:var(--text);">89%</strong> of renters say they would leave a review if simply asked. The ask is most of the work. <span class="sub" style="color:var(--muted);font-size:12px;">Apartments.com renter survey</span></p></div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Example talking points</p>
+          <h2>Keep It Brief and Genuine</h2>
+          <p class="measure sub" style="margin-bottom:24px;">These are examples, not scripts. Tailor them to the tenant or owner and the moment. Keep it short and natural, and let the ask be part of a genuinely positive interaction, never salesy.</p>
+          <div class="grid grid-3">
+            <div class="card card-quiet"><h4>After a smooth move-in</h4><p>"So glad the move-in went well. If you have a minute sometime, a quick Google review really helps our team."</p></div>
+            <div class="card card-quiet"><h4>After resolving a request</h4><p>"Happy we could take care of that for you. If you'd ever like to share your experience, we'd really appreciate it."</p></div>
+            <div class="card card-quiet"><h4>With an owner</h4><p>"Thanks for trusting us with your property. If you've been happy with how things are going, a short review helps other owners find us."</p></div>
+          </div>
+          <div class="card" style="margin-top:20px;">
+            <h4>When things aren't going smoothly</h4>
+            <p>The best moment to address a concern is before it ever becomes a review. If an interaction feels off, gently ask how we can make things right and try to resolve it on the spot. Solving the problem in the moment is the real goal, and a positive review often follows on its own.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ============ RECOGNITION & GOALS ============ -->
+      <div class="page" id="page-recognition">
+        <section class="reveal">
+          <p class="eyebrow">Recognition</p>
+          <h2>The People Behind the Reviews</h2>
+          <p class="measure sub" style="margin-bottom:24px;">Our tenants and owners name these team members again and again. <span class="todo-note">Details to confirm</span></p>
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-head"><h4>Shahdad</h4><span class="chip ok">Leasing &amp; move-ins</span></div>
+              <p>Named in the majority of our recent five-star reviews. Tenants consistently mention his knowledge, communication, and easy, stress-free move-ins. <span class="dim-num">[#] reviews to confirm.</span></p>
+            </div>
+            <div class="card">
+              <div class="card-head"><h4>Alyssa Henne</h4><span class="chip ok">Property management</span></div>
+              <p>Singled out by owners for her knowledge and approachability, including the Bolero Condominium. "We are lucky to have her on our side." <span class="dim-num">[#] reviews to confirm.</span></p>
+            </div>
+          </div>
+          <p class="form-note" style="margin-top:16px;">Add any other standouts here, along with review counts, themes tenants mention, and any recognition planned (certificate, gift card, or a shout-out).</p>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Team goals ahead</p>
+          <h2>Setting the Pace</h2>
+          <div class="metrics" style="margin-bottom:28px;">
+            <div class="metric"><div class="num" data-static>10</div><div class="lbl">five-star reviews a month, across the team</div></div>
+            <div class="metric"><div class="num" data-static>1</div><div class="lbl">five-star review a week, per team member</div></div>
+            <div class="metric"><div class="num" data-static>4+</div><div class="lbl">stars held on every AGM profile</div></div>
+          </div>
+          <div class="goalbar">
+            <div class="gb-head"><h4>This month's progress</h4><span class="gb-count"><span class="dim-num">[6]</span> of 10</span></div>
+            <div class="progress"><div class="bar" style="width:60%"></div></div>
+            <div class="gb-foot"><span class="todo-note">To update</span> Set the current count before the meeting. A little friendly competition keeps the momentum going.</div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Closing</p>
+          <h2>Every Interaction Is a Chance</h2>
+          <p class="lead">Thank you for the care you bring to our tenants and owners every day. Keep delivering service worth talking about, ask at the natural moments, and the momentum takes care of the rest. This is a team effort, and it is working.</p>
+        </section>
+      </div>
+
+      <!-- ============ REPUTATION PORTAL ============ -->
+      <div class="page" id="page-portal">
+        <section class="reveal">
+          <p class="eyebrow">The tools</p>
+          <h2>Everything You Need to Ask</h2>
+          <p class="measure sub" style="margin-bottom:28px;">Asking is easy when the tools do the work. Here is what is available to the team.</p>
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-head"><h4>Print</h4><span class="chip ok">On hand</span></div>
+              <ul class="points" style="border-top:none;">
+                <li>General review-request flyers with a QR code</li>
+                <li>Tenant welcome flyer with a QR code</li>
+                <li>Review stickers for the office and packets</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-head"><h4>Digital</h4><span class="chip ok">Reputation Portal</span></div>
+              <ul class="points" style="border-top:none;">
+                <li>Generate a custom review request with the link embedded automatically</li>
+                <li>Send it by text or email in a couple of taps</li>
+                <li>A built-in tracker for every request and review</li>
+              </ul>
+              <p class="form-note" style="margin-top:14px;"><span class="todo-note">To load</span> Add the portal link so the team can open it directly.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <p class="eyebrow">Keep it handy</p>
+          <h2>Pocket Reminder</h2>
+          <p class="measure sub" style="margin-bottom:24px;">Print this, cut along the dashed line, and keep it at your desk.</p>
+          <div class="pocket">
+            <span class="pk-scissor">✂</span>
+            <h4>Asking for a Review</h4>
+            <p class="pk-sub">AGM Real Estate Group · Reputation Management</p>
+            <div class="pk-group">
+              <div class="pk-label">When to ask</div>
+              <ul>
+                <li>After a positive tour</li>
+                <li>When an application is signed</li>
+                <li>After a smooth move-in</li>
+                <li>Once a request is resolved well</li>
+                <li>When a renewal is submitted</li>
+              </ul>
+            </div>
+            <div class="pk-group">
+              <div class="pk-label">How to ask</div>
+              <ul>
+                <li>"So glad that went well. If you have a minute, a quick Google review really helps our team." (tailor to the person)</li>
+              </ul>
+            </div>
+            <div class="pk-group">
+              <div class="pk-label">Remember</div>
+              <ul>
+                <li>Always voluntary, never any pressure</li>
+                <li>Thank them either way</li>
+                <li>If something is off, make it right first</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      </div><!-- /content-inner -->
+      <nav class="pager" id="pager" aria-label="Section pager"></nav>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <p style="margin:0 0 6px;"><strong style="color:var(--text)">AGM Real Estate Group</strong> · Reputation Management</p>
+          <p style="margin:0; max-width:52ch;">An all-staff briefing on our Reputation Management Program: where we started, where we are today, and the habits that keep us moving forward.</p>
+        </div>
+        <div>
+          <p style="margin:0 0 4px;">12330 Northup Way, Bellevue, WA 98005</p>
+          <p style="margin:0;">Internal use only.</p>
+        </div>
+      </div>
+      <p class="confidential">Internal — prepared for AGM Real Estate Group staff. Not for distribution.</p>
+    </footer>
+  </div>
+</div>
+
+<!-- ===================== FLOATING SIDE NAV ===================== -->
+<nav class="sidenav" id="sidenav" aria-label="Jump to section">
+  <button class="sidenav-fab" id="sidenavOpen" aria-label="Open section navigation" title="Sections">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+  <div class="sidenav-head">
+    <span class="sidenav-title">Jump to</span>
+    <button class="sidenav-close" id="sidenavClose" aria-label="Collapse navigation" title="Collapse">×</button>
+  </div>
+  <div class="sidenav-list" id="sidenavList"></div>
+</nav>
+
+<!-- ===================== FLOATING SECTION ARROW ===================== -->
+<button class="flow-next" id="flowNext" aria-label="Next section" title="Next section">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <figure class="lb-fig"><img id="lbImg" alt="" /><figcaption id="lbTitle"></figcaption></figure>
+</div>
+
+<script>
+/* analytics stub */
+window.dataLayer = window.dataLayer || [];
+function track(event, props){
+  var payload = Object.assign({event:event, ts:Date.now()}, props||{});
+  window.dataLayer.push(payload);
+  if (window.posthog) { try{ window.posthog.capture(event, props||{}); }catch(e){} }
+}
+
+/* ---- RAIL content per route ---- */
+var RAILS = {
+  'overview': {
+    eyebrow:'All-Staff Briefing · Internal', title:'Where We Stand Today',
+    pos:'A quick refresher on our Reputation Management Program: where we started, where we are now, and the habits that keep us moving forward.',
+    glance:[['Google rating','[4.5]★'],['Total reviews','[8]'],['Five-star','[7 of 8]'],['Monthly goal','10 reviews']],
+    foot:'Prepared by AGM Real Estate Group. Bracketed figures to confirm.'
+  },
+  'agenda': {
+    eyebrow:'Today’s Meeting', title:'How We’ll Spend Our Time',
+    pos:'A refresher on the program, and a moment to recognize outstanding work. Roughly 25 minutes together.',
+    glance:[['Duration','~25 min'],['Sections','8'],['Leads','Soraya · Leary · Gerry']],
+    foot:'All-staff meeting agenda.'
+  },
+  'progress': {
+    eyebrow:'Where We Were → Where We Are', title:'From 2.2 to 4.5 Stars',
+    pos:'The old AGM Inc profile sat at 2.2 stars. The new AGM Real Estate Group profile tells a very different story, and it keeps getting better.',
+    glance:[['Then','2.2★'],['Now','[4.5]★'],['Reply rate','Every review'],['Goal','10 / month']],
+    foot:'Ratings and counts marked to confirm.'
+  },
+  'program': {
+    eyebrow:'The Program & Playbook', title:'What We Do, and How',
+    pos:'Our objectives, the ground rules we hold to, and the everyday habits that earn five-star reviews from tenants and owners.',
+    glance:[['Target','4+ stars, everywhere'],['Reviews','Always voluntary'],['Best moment','Right after a win']],
+    foot:'Talking points are examples; tailor to each tenant or owner.'
+  },
+  'recognition': {
+    eyebrow:'Recognition & Goals', title:'The People Behind the Reviews',
+    pos:'Celebrating the team members our tenants and owners name by name, and setting the pace for the months ahead.',
+    glance:[['Team goal','10 / month'],['Each person','~1 / week'],['Standouts','Shahdad · Alyssa']],
+    foot:'Recognition details to confirm before the meeting.'
+  },
+  'portal': {
+    eyebrow:'Reputation Portal', title:'Everything You Need to Ask',
+    pos:'The tools that make asking easy: printed flyers and QR codes, a review-request generator, and a built-in tracker.',
+    glance:[['Print','Flyers · QR · Stickers'],['Digital','Portal + tracker'],['The ask','One tap to review']],
+    foot:'Portal link to confirm.'
+  }
+};
+
+function renderRail(route){
+  var d = RAILS[route] || RAILS.overview;
+  var html = '';
+  html += '<p class="eyebrow-accent">'+d.eyebrow+'</p>';
+  html += '<h1>'+d.title+'</h1>';
+  html += '<p class="pos">'+d.pos+'</p>';
+  if (d.glance && d.glance.length){
+    html += '<div class="rail-glance">';
+    d.glance.forEach(function(g){ html += '<div class="rg"><span class="k">'+g[0]+'</span><span class="v">'+g[1]+'</span></div>'; });
+    html += '</div>';
+  }
+  html += '<div class="rail-foot"><div class="sep">'+d.foot+'</div></div>';
+  document.getElementById('rail').innerHTML = html;
+}
+
+/* ---- Router ---- */
+var ROUTES = ['overview','agenda','progress','program','recognition','portal'];
+var TITLES = {
+  'overview':'Overview — AGM Reputation Management',
+  'agenda':'Agenda — AGM Reputation Management',
+  'progress':'Where We Stand — AGM Reputation Management',
+  'program':'The Program — AGM Reputation Management',
+  'recognition':'Recognition & Goals — AGM Reputation Management',
+  'portal':'Reputation Portal — AGM Reputation Management'
+};
+var NAVLABELS = {
+  'overview':'Overview', 'agenda':'Agenda', 'progress':'Where We Stand',
+  'program':'The Program', 'recognition':'Recognition & Goals', 'portal':'Reputation Portal'
+};
+function currentRoute(){
+  var h = (location.hash || '').replace(/^#\/?/,'');
+  return ROUTES.indexOf(h) >= 0 ? h : 'overview';
+}
+
+function buildSideNav(){
+  var list = document.getElementById('sidenavList');
+  if (!list) return;
+  list.innerHTML = ROUTES.map(function(r){
+    return '<button class="sidenav-item" data-route="'+r+'"><span class="dot"></span>'+NAVLABELS[r]+'</button>';
+  }).join('');
+}
+function setSideNavCollapsed(collapsed){
+  var el = document.getElementById('sidenav');
+  if (el) el.classList.toggle('collapsed', collapsed);
+  try{ localStorage.setItem('agm_sidenav', collapsed ? 'collapsed':'open'); }catch(e){}
+}
+
+function renderPager(route){
+  var el = document.getElementById('pager');
+  if (!el) return;
+  var i = ROUTES.indexOf(route);
+  var prev = i > 0 ? ROUTES[i-1] : null;
+  var next = i < ROUTES.length-1 ? ROUTES[i+1] : null;
+  var html = '';
+  html += prev
+    ? '<button class="pager-btn prev" data-route="'+prev+'"><span class="pg-dir">← Previous</span><span class="pg-name">'+NAVLABELS[prev]+'</span></button>'
+    : '<span></span>';
+  html += next
+    ? '<button class="pager-btn next" data-route="'+next+'"><span class="pg-dir">Next →</span><span class="pg-name">'+NAVLABELS[next]+'</span></button>'
+    : '<span></span>';
+  el.innerHTML = html;
+}
+
+function pageSections(){
+  var page = document.querySelector('.page.active');
+  if (!page) return [];
+  return Array.prototype.filter.call(page.children, function(el){ return el.tagName === 'SECTION'; });
+}
+function nextSectionBelow(){
+  var secs = pageSections();
+  for (var i = 0; i < secs.length; i++){
+    if (secs[i].getBoundingClientRect().top > 100) return secs[i];
+  }
+  return null;
+}
+function updateFlowArrow(){
+  var btn = document.getElementById('flowNext');
+  if (!btn) return;
+  btn.classList.toggle('hide', !nextSectionBelow());
+}
+
+function showRoute(route){
+  ROUTES.forEach(function(r){
+    var el = document.getElementById('page-'+r);
+    if (el) el.classList.toggle('active', r===route);
+  });
+  document.querySelectorAll('.nav-link[data-route], .nav-cta[data-route], .sidenav-item[data-route]').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-route')===route);
+  });
+  renderRail(route);
+  renderPager(route);
+  document.title = TITLES[route] || TITLES.overview;
+  window.scrollTo({top:0, behavior:'auto'});
+  closeMobileNav();
+  runReveal();
+  updateFlowArrow();
+  engageRoute(route);
+  track('page_view', {page:route});
+}
+function go(route){
+  if (location.hash === '#/'+route) { showRoute(route); }
+  else { location.hash = '#/'+route; }
+  track('page_clicked', {to:route});
+}
+window.addEventListener('hashchange', function(){ showRoute(currentRoute()); });
+
+document.addEventListener('click', function(e){
+  var t = e.target.closest('[data-route]');
+  if (t){ e.preventDefault(); go(t.getAttribute('data-route')); }
+});
+document.addEventListener('keydown', function(e){
+  if ((e.key==='Enter'||e.key===' ') && document.activeElement && document.activeElement.hasAttribute('data-route') && document.activeElement.classList.contains('brand')){
+    e.preventDefault(); go(document.activeElement.getAttribute('data-route'));
+  }
+});
+
+/* side nav */
+buildSideNav();
+(function(){
+  var closeBtn = document.getElementById('sidenavClose');
+  var openBtn = document.getElementById('sidenavOpen');
+  if (closeBtn) closeBtn.addEventListener('click', function(){ setSideNavCollapsed(true); });
+  if (openBtn) openBtn.addEventListener('click', function(){ setSideNavCollapsed(false); });
+  var saved = null; try{ saved = localStorage.getItem('agm_sidenav'); }catch(e){}
+  if (saved === 'collapsed') setSideNavCollapsed(true);
+})();
+
+(function(){
+  var btn = document.getElementById('flowNext');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var next = nextSectionBelow();
+    if (next){ next.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+  window.addEventListener('scroll', updateFlowArrow, {passive:true});
+  window.addEventListener('resize', updateFlowArrow);
+})();
+
+/* mobile nav / theme */
+var navlinks = document.getElementById('navlinks');
+var hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click', function(){
+  var open = navlinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', open ? 'true':'false');
+});
+function closeMobileNav(){ navlinks.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); }
+
+var root = document.documentElement;
+document.getElementById('themeToggle').addEventListener('click', function(){
+  var next = root.getAttribute('data-theme')==='dark' ? 'light':'dark';
+  root.setAttribute('data-theme', next);
+  track('theme_toggled', {theme:next});
+});
+
+/* reveal on scroll */
+var io = null;
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); en.target.querySelectorAll('.metric .num').forEach(animateNum); io.unobserve(en.target);} });
+  }, {threshold:0.06, rootMargin:'0px 0px -30px 0px'});
+}
+function runReveal(){
+  var active = document.querySelector('.page.active');
+  if (!active) return;
+  active.querySelectorAll('.reveal').forEach(function(el){
+    el.classList.remove('in');
+    if (io) io.observe(el); else el.classList.add('in');
+  });
+}
+
+/* lightbox (photo frames, if any added later) */
+var lightbox = document.getElementById('lightbox');
+var lbTitle = document.getElementById('lbTitle');
+var lbImg = document.getElementById('lbImg');
+function openLightbox(label, imgSrc){
+  lbTitle.textContent = label || '';
+  if (imgSrc){ lbImg.src = imgSrc; lbImg.alt = label || ''; lbImg.style.display='block'; }
+  else { lbImg.style.display='none'; }
+  lightbox.classList.add('open');
+}
+function closeLightbox(){ lightbox.classList.remove('open'); }
+document.addEventListener('click', function(e){
+  var f = e.target.closest('.gallery .frame');
+  if (f){ var im = f.querySelector('img'); openLightbox(f.getAttribute('aria-label'), im ? im.src : null); }
+});
+document.addEventListener('keydown', function(e){ if (e.key==='Escape') closeLightbox(); });
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', function(e){ if(e.target===lightbox) closeLightbox(); });
+
+/* count-up on stats */
+function animateNum(el){
+  if (el.dataset.animated || el.dataset.static !== undefined) return;
+  var t = el.textContent.trim();
+  var m = t.match(/^([~≈$]?)([\d,]+(?:\.\d+)?)(.*)$/);
+  if (!m) return;
+  el.dataset.animated = '1';
+  var pre = m[1], num = parseFloat(m[2].replace(/,/g,'')), suf = m[3];
+  var dec = (m[2].split('.')[1]||'').length, start = null;
+  function fmt(v){
+    var str = num >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(dec);
+    return pre + str + suf;
+  }
+  function step(ts){
+    if (!start) start = ts;
+    var p = Math.min((ts-start)/700, 1), e = 1 - Math.pow(1-p, 3);
+    el.textContent = fmt(num*e);
+    if (p < 1) requestAnimationFrame(step); else el.textContent = t;
+  }
+  requestAnimationFrame(step);
+}
+
+/* before / after slider */
+document.querySelectorAll('.ba').forEach(function(ba){
+  var range = ba.querySelector('.ba-range');
+  function set(v){ ba.style.setProperty('--p', v+'%'); }
+  if (range){ set(range.value); range.addEventListener('input', function(){ set(range.value); }); }
+});
+
+/* engagement analytics */
+var _route = null, _enter = Date.now();
+function engageRoute(route){
+  if (_route){
+    var secs = Math.round((Date.now()-_enter)/1000);
+    if (secs > 2) track('page_dwell', {page:_route, seconds:secs});
+  }
+  _route = route; _enter = Date.now();
+}
+
+/* init */
+showRoute(currentRoute());
+</script>
+</body>
+</html>
