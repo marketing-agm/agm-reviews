@@ -576,6 +576,8 @@ a.doc:hover .dmeta{color:var(--accent);}
 /* program tiles: outline only, with an accent edge and an icon badge */
 .card.tile{background:transparent; box-shadow:none; position:relative; overflow:hidden;}
 .card.tile::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); opacity:.85;}
+.card.tile.rule{background:#f3f9fe; background:color-mix(in srgb, var(--accent) 7%, var(--surface)); border-color:transparent;}
+[data-theme="dark"] .card.tile.rule{background:color-mix(in srgb, var(--accent) 10%, var(--surface));}
 .tile-ic{width:42px; height:42px; border-radius:11px; background:var(--accent-wash); color:var(--accent); display:grid; place-items:center; margin-bottom:16px;}
 .tile-ic svg{width:22px; height:22px;}
 </style>
@@ -847,7 +849,7 @@ a.doc:hover .dmeta{color:var(--accent);}
           <p class="eyebrow">Program overview</p>
           <h2>Objectives &amp; Ground Rules</h2>
           <div class="grid grid-2">
-            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2l2.5 5.9 6.4.5-4.9 4.2 1.5 6.2L12 16.9 6 20l1.5-6.2L2.6 9.6l6.4-.5z"/></svg></div><h4>Hold 4+ stars, everywhere</h4><p>Keep a 4+ star rating across every AGM profile, so we clear the bar prospects set before they will even consider a property.</p></div>
+            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2l2.5 5.9 6.4.5-4.9 4.2 1.5 6.2L12 16.9 6 20l1.5-6.2L2.6 9.6l6.4-.5z"/></svg></div><h4>Hold 4+ stars</h4><p>Keep the AGM Real Estate Group, LLC Google profile at 4+ stars, so we clear the bar prospects set before they will even consider us.</p></div>
             <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg></div><h4>Show up and stand out</h4><p>Strengthen our search visibility and first impressions, so tenants and owners find us and like what they see.</p></div>
             <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></div><h4>Keep a steady stream</h4><p>Build a genuine, ongoing flow of reviews from tenants and owners, so our rating reflects the real quality of our work.</p></div>
             <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7.5 21 12 18.5 16.5 21 15 13.5"/></svg></div><h4>Recognize the team</h4><p>Celebrate and reward the people earning the reviews, because the results are theirs.</p></div>
@@ -855,10 +857,10 @@ a.doc:hover .dmeta{color:var(--accent);}
           <p class="subhead">The ground rules we hold to</p>
           <p class="measure sub" style="margin:0 0 16px;">Asking for reviews is simple when we keep to a few principles.</p>
           <div class="grid grid-2">
-            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 6.9a4.3 4.3 0 0 1 8.5 1.9c0 6.2-8.5 11.7-8.5 11.7z"/></svg></div><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
-            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
-            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
-            <div class="card tile"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
+            <div class="card tile rule"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 6.9a4.3 4.3 0 0 1 8.5 1.9c0 6.2-8.5 11.7-8.5 11.7z"/></svg></div><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
+            <div class="card tile rule"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
+            <div class="card tile rule"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
+            <div class="card tile rule"><div class="tile-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
           </div>
         </section>
 
