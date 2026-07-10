@@ -124,6 +124,9 @@ ul{margin:0; padding:0; list-style:none;}
 .content section:last-child{margin-bottom:0;}
 .content section + section{border-top:1px solid var(--border-soft); padding-top:72px;}
 .content h2{margin-bottom:20px;}
+/* first section heading on each page reads larger, now that the rail title is gone */
+.page > section:first-child > h2{font-size:30px; letter-spacing:-0.02em; margin-bottom:22px;}
+@media(max-width:600px){.page > section:first-child > h2{font-size:25px;}}
 .lead{font-size:16px; line-height:1.65; color:var(--text-2); max-width:60ch; margin-bottom:0;}
 .measure{max-width:62ch; line-height:1.65;}
 .sub{font-size:14px; color:var(--text-3); line-height:1.65;}
@@ -1098,7 +1101,6 @@ function renderRail(route){
   var d = RAILS[route] || RAILS.overview;
   var html = '';
   html += '<p class="eyebrow-accent">'+d.eyebrow+'</p>';
-  html += '<h1>'+d.title+'</h1>';
   html += '<p class="pos">'+d.pos+'</p>';
   if (d.glance && d.glance.length){
     html += '<div class="rail-glance">';
