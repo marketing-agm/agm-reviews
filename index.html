@@ -534,6 +534,17 @@ a.doc:hover .dmeta{color:var(--accent);}
 
 /* small helper: soft data-to-confirm note reused from template as .todo-note */
 .dim-num{opacity:.55;}
+
+/* ---- refinements: flatter surfaces, tighter rhythm, supporting stats ---- */
+.card,.chart,.review,.goalbar{background:transparent;}
+.hero{background:none;}
+.content section{margin-bottom:56px;}
+.content section + section{padding-top:48px;}
+/* stat blocks: the message leads, the number supports below it */
+.stat-point{font-size:14.5px; line-height:1.6; color:var(--text); font-weight:500; margin:0 0 12px; max-width:48ch;}
+.stat-support{font-size:12px; color:var(--muted); line-height:1.5; margin:0;}
+.stat-support .stat-n{font-family:var(--serif); font-weight:700; color:var(--accent); font-size:14px; margin-right:3px; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
+.subhead{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--text-3); margin:36px 0 16px;}
 </style>
 </head>
 <body>
@@ -583,10 +594,7 @@ a.doc:hover .dmeta{color:var(--accent);}
               <span class="j-pill j-after"><span class="jp-n">4.5★</span><span class="jp-l">Now · AGM Real Estate Group</span></span>
             </div>
           </div>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">The numbers today</p>
+          <p class="eyebrow" style="margin-top:48px;">The numbers today</p>
           <h2>At a Glance</h2>
           <span class="todo-note">Bracketed figures to confirm</span>
           <div class="grid grid-3" style="margin-top:8px;">
@@ -604,10 +612,10 @@ a.doc:hover .dmeta{color:var(--accent);}
           <h2>Reviews Move the Business</h2>
           <p class="lead" style="margin-bottom:28px;">For most tenants and owners, our reputation is the first conversation we have with them, long before a call or a tour.</p>
           <div class="grid grid-2">
-            <div class="card"><div class="f-num">98%</div><p>of renters say online reviews are important to their apartment search. Our profile is the first impression we make. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Apartments.com renter survey</span></p></div>
-            <div class="card"><div class="f-num">5–9%</div><p>more revenue is linked to each one-star gain in rating. Reputation is business development. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Harvard Business School (Luca)</span></p></div>
-            <div class="card"><div class="f-num">71%</div><p>of renters say a negative review would stop them from even scheduling a tour. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Renter survey data</span></p></div>
-            <div class="card"><div class="f-num">55%</div><p>won't consider a property with fewer than four ratings. Volume and freshness matter as much as the score, which is why we keep asking. <span class="sub" style="display:block;margin-top:8px;color:var(--muted);font-size:12px;">Renter survey data</span></p></div>
+            <div class="card"><p class="stat-point">Our profile is the first impression we make. Most renters read reviews before they ever call or tour.</p><p class="stat-support"><span class="stat-n">98%</span>of renters say reviews are important to their apartment search · Apartments.com</p></div>
+            <div class="card"><p class="stat-point">A stronger reputation is real business development, not just goodwill.</p><p class="stat-support"><span class="stat-n">5–9%</span>more revenue is linked to each one-star gain in rating · Harvard Business School</p></div>
+            <div class="card"><p class="stat-point">A weak profile quietly costs us tours we never even hear about.</p><p class="stat-support"><span class="stat-n">71%</span>of renters would skip a tour after seeing a negative review · Renter survey</p></div>
+            <div class="card"><p class="stat-point">Volume and freshness matter as much as the score, which is exactly why we keep asking.</p><p class="stat-support"><span class="stat-n">55%</span>won't consider a property with fewer than four ratings · Renter survey</p></div>
           </div>
           <div class="card card-quiet" style="margin-top:20px;">
             <h4>The compounding effect</h4>
@@ -752,15 +760,10 @@ a.doc:hover .dmeta{color:var(--accent);}
             </div>
             <p class="chart-cap">The lesson for the team: one tough review is not a setback, it is a dip. Keep the good reviews coming and the trajectory keeps climbing. Consistency beats perfection. <span class="dim-num">(Illustrative trajectory; running-average shape based on our 8 reviews to date.)</span></p>
           </div>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">The math of momentum</p>
-          <h2>Volume Is Protection</h2>
-          <p class="measure sub" style="margin-bottom:24px;">The same single one-star review does very different damage depending on how many good reviews stand behind it.</p>
+          <p class="subhead">Volume is protection</p>
           <div class="grid grid-2">
-            <div class="card"><div class="f-num">4.5★</div><p><strong>One 1★ review at 8 reviews.</strong> With only a handful of reviews, a single bad one pulls the whole average down to 4.5. That is where we are today.</p></div>
-            <div class="card"><div class="f-num">4.9★</div><p><strong>The same 1★ review at 80 reviews.</strong> With a deep, steady stream behind it, that same review barely registers. This is exactly why we keep asking.</p></div>
+            <div class="card"><p class="stat-point">With only a handful of reviews, a single bad one pulls the whole average down. That is where we are today.</p><p class="stat-support"><span class="stat-n">4.5★</span>one 1★ review, at 8 reviews total</p></div>
+            <div class="card"><p class="stat-point">With a deep, steady stream behind it, that same review barely registers. This is why we keep the momentum up.</p><p class="stat-support"><span class="stat-n">4.9★</span>the same 1★ review, at 80 reviews total</p></div>
           </div>
         </section>
 
@@ -820,35 +823,20 @@ a.doc:hover .dmeta{color:var(--accent);}
       <div class="page" id="page-program">
         <section class="reveal">
           <p class="eyebrow">Program overview</p>
-          <h2>Our Objectives</h2>
+          <h2>Objectives &amp; Ground Rules</h2>
           <div class="grid grid-2">
             <div class="card"><h4>Hold 4+ stars, everywhere</h4><p>Keep a 4+ star rating across every AGM profile, so we clear the bar prospects set before they will even consider a property.</p></div>
             <div class="card"><h4>Show up and stand out</h4><p>Strengthen our search visibility and first impressions, so tenants and owners find us and like what they see.</p></div>
             <div class="card"><h4>Keep a steady stream</h4><p>Build a genuine, ongoing flow of reviews from tenants and owners, so our rating reflects the real quality of our work.</p></div>
             <div class="card"><h4>Recognize the team</h4><p>Celebrate and reward the people earning the reviews, because the results are theirs.</p></div>
           </div>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">Ground rules</p>
-          <h2>How We Ask, Responsibly</h2>
-          <p class="measure sub" style="margin-bottom:24px;">Asking for reviews is simple when we keep to a few principles.</p>
+          <p class="subhead">The ground rules we hold to</p>
+          <p class="measure sub" style="margin:0 0 16px;">Asking for reviews is simple when we keep to a few principles.</p>
           <div class="grid grid-2">
             <div class="card"><h4>Always voluntary</h4><p>A review is an invitation, never a requirement. We make it easy and leave the choice with the tenant or owner.</p></div>
             <div class="card"><h4>Never any pressure</h4><p>We ask once, warmly, and let it go. Reviews are never incentivized or traded for anything.</p></div>
             <div class="card"><h4>Thank everyone, either way</h4><p>Whether or not someone leaves a review, we thank them for their time and their trust.</p></div>
             <div class="card"><h4>Tracked and recognized</h4><p>Every review is logged in the Reputation Portal, and the team behind them is recognized.</p></div>
-          </div>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>From Great Service to a Great Review</h2>
-          <div class="steps">
-            <div class="step"><div><h4>Deliver a great experience</h4><p>Everything starts with service worth talking about, for tenants and owners alike.</p></div></div>
-            <div class="step"><div><h4>Ask at the natural moment</h4><p>When something goes well, that is the cue to invite a review.</p></div></div>
-            <div class="step"><div><h4>Send the link</h4><p>Make it effortless with a direct link or a QR code from the Reputation Portal.</p></div></div>
-            <div class="step"><div><h4>Track and recognize</h4><p>Reviews are logged, and standout performance is celebrated with the team.</p></div></div>
           </div>
         </section>
 
@@ -862,12 +850,8 @@ a.doc:hover .dmeta{color:var(--accent);}
             <li><strong>Keep it personal and professional.</strong> Use names, follow up, and close the loop.</li>
             <li><strong>Leave people feeling cared for</strong> before you wrap up any interaction.</li>
           </ul>
-        </section>
-
-        <section class="reveal">
-          <p class="eyebrow">The review-moment map</p>
-          <h2>The Natural Moments to Ask</h2>
-          <p class="measure sub" style="margin-bottom:24px;">These are moments in the work you already do. When one goes well, that is your cue.</p>
+          <p class="subhead">The natural moments to ask</p>
+          <p class="measure sub" style="margin:0 0 16px;">These are moments in the work you already do. When one goes well, that is your cue.</p>
           <div class="flow">
             <div class="fstep is-done"><div class="fs-n">01</div><div class="fs-d">Leasing</div><div class="fs-k"><h4>A positive tour</h4></div><p>They loved the unit and the walkthrough went smoothly.</p></div>
             <div class="fstep is-done"><div class="fs-n">02</div><div class="fs-d">Leasing</div><div class="fs-k"><h4>Application signed</h4></div><p>A clear, easy approval and signing experience.</p></div>
@@ -875,7 +859,7 @@ a.doc:hover .dmeta{color:var(--accent);}
             <div class="fstep is-done"><div class="fs-n">04</div><div class="fs-d">Service</div><div class="fs-k"><h4>Concern resolved</h4></div><p>A maintenance request handled quickly and well.</p></div>
             <div class="fstep is-done"><div class="fs-n">05</div><div class="fs-d">Retention</div><div class="fs-k"><h4>Renewal submitted</h4></div><p>A happy resident choosing to stay another year.</p></div>
           </div>
-          <div class="card card-quiet" style="margin-top:24px;"><p style="margin:0;"><strong style="color:var(--text);">89%</strong> of renters say they would leave a review if simply asked. The ask is most of the work. <span class="sub" style="color:var(--muted);font-size:12px;">Apartments.com renter survey</span></p></div>
+          <div class="card card-quiet" style="margin-top:24px;"><p class="stat-point" style="margin-bottom:8px;">The ask is most of the work. People are glad to help when we simply invite them.</p><p class="stat-support"><span class="stat-n">89%</span>of renters would leave a review if asked · Apartments.com</p></div>
         </section>
 
         <section class="reveal">
